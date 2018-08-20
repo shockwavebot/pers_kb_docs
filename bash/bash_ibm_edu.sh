@@ -1,5 +1,3 @@
->>> Shell scripting IBM internal education <<<
-
 $ - SUBSTITUTION SIGN
 
 ### Invoking scripts ###

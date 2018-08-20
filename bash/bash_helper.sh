@@ -37,3 +37,8 @@ BASH: razlika izmedju [] and [[ ]] !!!
 # copy file with a progress bar 
 rsync -ah --progress source destination
 
+# write to a file from a script 
+cat <<EOF > /tmp/script_name
+#!/bin/bash
+# script code here 
+EOF
