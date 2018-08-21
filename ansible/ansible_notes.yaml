@@ -1,0 +1,59 @@
+# requirements: 
+#   - ansible installed as python library or system pkg 
+#   - passwordless access to nodes 
+#   - configured /etc/ansible/hosts file with groups and IPs 
+#     EXAMPLE:
+#             [ses-nodes]
+#             10.86.1.33
+#             10.86.1.37
+#             [salt-master]
+#             10.86.1.33
+
+
+---
+- hosts:
+    - ses-nodes:!salt-master # excluding salt-master group of hosts 
+  remote_user: root
+  gather_facts: no
+  gather_subset: min, network # remove gather_facts: no
+  vars:
+    - domname: qalab
+  vars_files:
+    - ./artifacts.yaml
+  tasks:
+      - include: ./disable_firewall_task.yaml # read task from another yaml file 
+      - name: run shell block of commands 
+        shell: |
+            systemctl disable SuSEfirewall2.service
+            systemctl stop SuSEfirewall2.service
+            systemctl status SuSEfirewall2.service|grep 'Loaded:'|awk -F ';' '{print $2}'|grep disabled
+        register: out # catch stdout
+      - debug: var=out.stdout_lines
+
+      - name: copy file 
+        copy:
+          src: /tmp/hosts_priv
+          dest: /tmp/hosts_priv
+
+      - name: cat another file to end of a file 
+        shell: |
+            cat /tmp/hosts_priv|tee -a /etc/hosts
+        args:
+          warn: false
+
+      - name: change a line in a file 
+        lineinfile:
+          path: /etc/zypp/zypp.conf
+          regexp: '^.*solver.allowVendorChange'
+          line: 'solver.allowVendorChange = true'
+
+      - name: insert line after line in a file 
+        lineinfile:
+          path: /etc/zypp/zypp.conf
+          regexp: '^.* gpgcheck '
+          insertafter: '^# pkg_gpgcheck'
+          line: 'gpgcheck = off'
+
+
+# rerun ansible playbook only failed targets 
+ansible-playbook disable_firewall.yaml --limit @disable_firewall.retry
