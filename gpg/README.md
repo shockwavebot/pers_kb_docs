@@ -36,7 +36,7 @@ Last 8 can be used as keyID or keyname: `9BD7E6F6`
 
 #### Add email 
 
-`gpg --edit-key keyname` -> adduid -> save
+`gpg --edit-key keyname` -> `adduid` -> `save`
 
 ### Export public key
 
