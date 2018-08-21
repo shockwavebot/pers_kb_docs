@@ -7,7 +7,6 @@ function num_of_free_disks {
 	echo $NUMBER_OF_FREE_DISKS
 }
 
-
 # OBTAINING HOST DOMAIN
 # Directly from the host
 FQDN=$(hostname -f 2>/dev/null || cat /etc/hostname);export DOMAIN_NAME=${FQDN#*\.};echo "FQDN: " $FQDN
