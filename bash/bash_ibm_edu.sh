@@ -187,6 +187,15 @@ done < $filename
 ###########################################################################
 
 ### ARRAY ###
+arr=(Hello World)
+arr[0]=Hello
+arr[1]=World
+echo ${arr[0]} ${arr[1]}
+${arr[*]}         # All of the items in the array
+${!arr[*]}        # All of the indexes in the array
+${#arr[*]}        # Number of items in the array
+${#arr[0]}        # Length of item zero
+
 array[4]=variable
 echo ${array[3]}
 echo ${array[*]}
