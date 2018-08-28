@@ -19,7 +19,7 @@ git config --global http.sslVerify false # WORKING
 
 # update credentials
 git credential reject 
-git credential fill
+git credential fill 
 
 # ==================
 # create github repo from local dir
@@ -130,15 +130,6 @@ git rebase master topic
 #############################################################################
 # RULE TO FOLLOW: Do not rebase commits that exist outside your repository. #
 #############################################################################
-
-
-
-
-
-
-
-
-
 
 # 1. @github: fork the master branch to your profile
 # 2. git clone https://github.com/markostanojlovic/DeepSea ~/DeepSea

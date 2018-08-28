@@ -58,12 +58,13 @@ echo 'qatest:remaCAR-1'|chpasswd
 
 #################################################
 # encrypted USB drive
-# create 
+# create # cryptsetup installed 
+sudo cryptsetup -yv create luksOpen /dev/sdc1
 # mount
 dmesg|tail
 lsblk # or: sudo fdisk -l
 sudo cryptsetup luksOpen /dev/sdc1 LUKS01
-mount /dev/mapper/LUKS01 /mnt
+sudo mount /dev/mapper/LUKS01 /mnt
 #unmount
 umount /mnt
 sudo cryptsetup luksClose LUKS01
@@ -127,3 +128,7 @@ cut -c1-3 #sece i ostavlja samo prva 3 karaktera stringa
 
 # Replacement zameniti deo stringa 
 resultat=${original_sting/$sub_string/$replacement_string}
+
+
+
+
