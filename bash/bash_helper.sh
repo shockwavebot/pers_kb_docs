@@ -41,3 +41,14 @@ cat <<EOF > /tmp/script_name
 #!/bin/bash
 # script code here 
 EOF
+
+# get UUID of the disk
+sudo blkid /dev/sda  
+
+# remote exec ssh block 
+ssh root@$hostname << EOSSH >> $LOG 2>&1
+#commands
+EOSSH
+
+# change password without prompt
+echo 'qatest:remaCAR-1'|chpasswd
