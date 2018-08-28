@@ -45,6 +45,9 @@ EOF
 # get UUID of the disk
 sudo blkid /dev/sda  
 
+# execute local script over ssh
+ssh ses5node1 'bash -s' < ./tst.sh ses5node1
+
 # remote exec ssh block 
 ssh root@$hostname << EOSSH >> $LOG 2>&1
 #commands
@@ -52,3 +55,75 @@ EOSSH
 
 # change password without prompt
 echo 'qatest:remaCAR-1'|chpasswd
+
+#################################################
+# encrypted USB drive
+# create 
+# mount
+dmesg|tail
+lsblk # or: sudo fdisk -l
+sudo cryptsetup luksOpen /dev/sdc1 LUKS01
+mount /dev/mapper/LUKS01 /mnt
+#unmount
+umount /mnt
+sudo cryptsetup luksClose LUKS01
+#################################################
+
+# grep ip regex
+grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+
+# create random text file of specific size 
+base64 /dev/urandom | head --bytes=4MB > size.4MB.random.txt.file
+openssl rand -base64 10000000 -out /tmp/random.txt # 13MB # better way 
+dd if=/dev/zero of=speed_test_temp_file  bs=1024  count=102400
+
+# unpack tar.gz to a specific directory
+tar -xvf file.tar.gz -C /path/to/dir 
+
+# generate ssh key without prompt - for using in scripts
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa; cat ~/.ssh/id_rsa.pub
+sudo sed -i '/StrictHostKeyChecking/c\StrictHostKeyChecking no' /etc/ssh/ssh_config
+
+# tcp dump
+tcpdump -s0 -w /tmp/trace -i eth0
+
+# pronalazenje najvecih fajlova, files with most used space ond disk, occupancy, biggest files
+du -a / 2>/dev/null| sort -n -r | head -n 15
+find -type f -exec du -Sh / {} + 2>/dev/null | sort -rh | head -n 5
+
+# check available memory on the host
+cat /proc/meminfo |grep MemTotal
+
+# check whic TCP port application is using 
+ss -l -p -n|grep <PID>|<user>|<process_name>
+
+# Calculate date in the future 
+date -d "2017-03-05 +90 days" '+%Y-%m-%d'
+
+# list all the directories in the path variable
+ls -la $(echo $LIBPATH|tr ':' '\n')
+
+# sabiranje svih brojeva iz fajla
+sum=0;while read NUM && [[ $num == +([[:digit:]]) ]];do (( sum += NUM ));done < FILE_NAME; (( gb = sum/1024/1204/1024 ));echo $gb GB
+
+#Change case in a string
+tr '[:upper:]' '[:lower:]'
+
+# Obrisati fajlove starije od 90 dana
+find . -xdev -type f -name "rman_backup*" -mtime +90 -exec ls -l {} \;
+find . -xdev -type f -name "rman_backup*" -mtime +90 -exec rm -rf {} \;
+# Zauzeti FS
+df|awk '{if($4>=90 || $3==0)print}'
+
+# Nalazi sve fajlove koji su kreirani u zadnjih 10 min
+find -mmin +0 -mmin -10
+find . -mtime +3 | xargs rm -Rf
+
+# {} array of values with step 
+echo {1..15..4} # -> 1 5 9 13
+
+# CUT za secenje stringa
+cut -c1-3 #sece i ostavlja samo prva 3 karaktera stringa
+
+# Replacement zameniti deo stringa 
+resultat=${original_sting/$sub_string/$replacement_string}
