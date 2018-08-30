@@ -7,3 +7,6 @@ tsc --version
 unzip bootstrap-3.3.7-dist.zip -d ~/projects/AngularTutorial/
 sudo npm install -g @angular/cli
 ng
+ng new hello-angular
+cd hello-angular
+ng serve --open
