@@ -10,3 +10,9 @@ ng
 ng new hello-angular
 cd hello-angular
 ng serve --open
+# VS code extensions:
+# - angular-cli
+# - debugger fro chrome
+# - Angular 6 Snippets
+# - TSLint
+# - TypeScript Importer
