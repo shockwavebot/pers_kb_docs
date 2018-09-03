@@ -16,3 +16,5 @@ ng serve --open
 # - Angular 6 Snippets
 # - TSLint
 # - TypeScript Importer
+
+ng generate component heroes
