@@ -6,7 +6,7 @@ sed -e 's/taylor/rema_kralj/g;s/:/ /g'
 sed 's/,/ /'
 # brise trecu (3.) liniju
 sed '3d'
-# brise od 2 linije do 8 linije
+# brise od 2 linije do 8 linije remove lines 
 sed '2,8d'
 # brise od paterna “start” do paterna “kraj”
 sed '/start/,/kraj/d'

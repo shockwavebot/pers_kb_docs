@@ -67,6 +67,8 @@ export VAR 	# exportst variable VAR so it's inherited to other shells, but only 
 \w	# current working directory
 \W	# basename of current working directory
 
+http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
+http://mywiki.wooledge.org/BashGuide/TestsAndConditionals
 ### Conditional execution ###
 command1 && command2 	# If command1 is successful execute command2
 command1 || command2	# If command1 is not successful execute command2

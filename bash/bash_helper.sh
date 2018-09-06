@@ -98,6 +98,9 @@ cat /proc/meminfo |grep MemTotal
 # check whic TCP port application is using 
 ss -l -p -n|grep <PID>|<user>|<process_name>
 
+# Date format
+date +%Y-%m-%d' '%H:%M:%S
+
 # Calculate date in the future 
 date -d "2017-03-05 +90 days" '+%Y-%m-%d'
 
