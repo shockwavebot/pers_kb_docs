@@ -1,3 +1,25 @@
+
+#########################################
+# list all modules in a package
+import pkgutil
+import selenium # this is the package we are inspecting -- for example 'selenium' from stdlib
+package = selenium
+for importer, modname, ispkg in pkgutil.iter_modules(package.__path__):
+    print("Found submodule {} (is a package: {})".format(modname, ispkg))
+#########################################
+
+#########################################
+# wait until function
+import time
+def wait_until(somepredicate, timeout, period=0.25, *args, **kwargs):
+  mustend = time.time() + timeout
+  while time.time() < mustend:
+    if somepredicate(*args, **kwargs): return True
+    time.sleep(period)
+  return False
+#########################################
+
+
 # *** configure tab autocomplete
 import readline
 import rlcompleter
@@ -10,7 +32,7 @@ import rlcompleter
 # unpacking the list and dictionary
 In [1]: def foo(*arg):
    ...: 	print(arg)
-   ...:	 
+   ...:
 
 In [2]: list = [1,2,3]
 
@@ -152,5 +174,3 @@ soup=bs4.BeautifulSoup(webpage.text, 'html.parser')
 elem = soup.select('#content > div > ul > li > a')
 file_path=elem[0].get('href')
 file_url='http://www.mvcr.cz/mvcren/'+file_path
-
-
