@@ -43,4 +43,11 @@ sed '/nema/d;/^$/d' in.txt > out.txt
 # Brise sve linije koje sadrze 320 GB 298 GiB
 sed -i '/320 GB/298 GiB/d' /var/log/messages*
 
+ # substitute "foo" with "bar" ONLY for lines which contain "baz"
+ sed '/baz/s/foo/bar/g'
+
+ # change line c\
+sed '/GRUB_TIMEOUT/c\GRUB_TIMEOUT=2' /etc/default/grub
+
+ # append line after a\
 

@@ -253,7 +253,8 @@ use - using block as template - saving typing
 ###########################################
 
 
-
+# remove minion 
+salt-key -d minion_name
 
 
 
