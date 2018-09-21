@@ -110,6 +110,7 @@ u'M\u011bstsk\xe1 \u010d\xe1st:'.encode('utf8') # unicode to string
 for x in range(0, 3):
     print "We're on time %d" % (x)
 
+#####################################################
 # CASE statement
 # define the function blocks
 def zero():
@@ -137,6 +138,19 @@ options = {0 : zero,
 
 options[num]()
 # END CASE statement
+
+# other way: dictionary mappings, also known as associative arrays
+response = {
+    'question' : 'Sure.',
+    'yelling' : 'Whoa, chill out!',
+    'qestion yelling' : "Calm down, I know what I'm doing!",
+    'silence' : 'Fine. Be that way!'
+}
+return response.get(phraseType, 'Whatever.')
+
+#####################################################
+
+
 
 # random string of N lenght
 import string
