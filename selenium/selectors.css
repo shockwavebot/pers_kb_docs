@@ -1,0 +1,39 @@
+ID
+CSS   : #yoda
+XPATH : //div[@id='yoda']
+
+Class
+CSS   : .top
+XPATH : //div[@class='top']
+
+Direct child
+CSS   : div > img
+XPATH : //div/img
+
+Any child
+CSS   : div img
+XPATH : //div//img
+
+Attribute and value
+CSS   : img[src='yoda.jpg']
+XPATH : //img[@src='yoda.jpg']
+
+Multiple attribute and value
+CSS   : img[src='yoda.jpg'][class='frame']
+XPATH : //img[@src='yoda.jpg' and @class='frame']
+
+Next sibling
+CSS   : img.frame + img
+XPATH : //img[@class='frame']/following-sibling::img
+
+Inner text
+CSS   : N/A
+XPATH : //*[text()='Master Yoda'] */
+
+parent, ancestor, preceding, descendant
+CSS   : N/A
+XPATH : //p[text()='Talented desciple']/parent::div
+
+Exluding elements
+CSS   : img:not(.frame)
+XPATH : //img[not(@class='frame')]

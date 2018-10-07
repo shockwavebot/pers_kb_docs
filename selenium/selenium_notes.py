@@ -18,3 +18,8 @@ for (index = 0; index < arguments[0].attributes.length; ++index)\
 { items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value };\
 return items;', element)
 {'class': 'frame', 'src': 'yoda.jpg'} # RESULT
+
+# mouse hover
+from selenium.webdriver.common.action_chains import ActionChains
+hover = ActionChains(driver).move_to_element(elem)
+hover.perform()
