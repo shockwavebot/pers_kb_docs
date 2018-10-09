@@ -65,6 +65,11 @@ salt --out=yaml '*' cmd.run_all 'echo test'			# --out=yaml gives yaml output for
 # distribute/copy file from master to minion
 salt-cp '*' '/etc/ceph/ceph.conf' '/etc/ceph/'
 
+# copy file from minion to master
+sed -i '/^#file_recv: False/a\file_recv: True' /etc/salt/master; systemctl restart salt-master
+salt ses4node2.qalab cp.push /etc/ceph/ceph.conf # destination is /var/cache/salt/master/minions/ses4node2.qalab/files/etc/ceph/ceph.conf
+
+
 salt-call state.apply ceph.purge
 salt-call grains.item fqdn --out yaml|grep fqdn|awk -F ':' '{print $2}') # get the local fqdn 
 
