@@ -23,3 +23,6 @@ return items;', element)
 from selenium.webdriver.common.action_chains import ActionChains
 hover = ActionChains(driver).move_to_element(elem)
 hover.perform()
+
+# page zoom in for Chrome
+driver.execute_script("document.body.style.zoom = '1.5'")
