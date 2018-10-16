@@ -26,3 +26,13 @@ hover.perform()
 
 # page zoom in for Chrome
 driver.execute_script("document.body.style.zoom = '1.5'")
+
+# capture screen shot
+driver.save_screenshot(‘/path/to/img.png’)
+driver.get_screenshot_as_file(‘/path/to/img.png’)
+driver.get_screenshot_as_png()
+driver.get_screenshot_as_base64()
+
+# switching between windows/tabs
+driver.window_handles
+driver.switch_to_window(handle)
