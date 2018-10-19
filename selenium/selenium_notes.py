@@ -36,3 +36,19 @@ driver.get_screenshot_as_base64()
 # switching between windows/tabs
 driver.window_handles
 driver.switch_to_window(handle)
+
+####################################################
+# event listener
+# https://github.com/browserstack/selenium-webdriver-python/blob/85573164744ce5345044cc8785c429b3cc0cdbe2/selenium/webdriver/support/abstract_event_listener.py
+from selenium.webdriver.support.events import EventFiringWebDriver, AbstractEventListener
+
+class MyListener(AbstractEventListener):
+    def before_navigate_to(self, url, driver):
+        print("Log: Before navigate to {}".format(url))
+    def after_navigate_to(self, url, driver):
+        print("Log: After navigate to {}".format(url))
+
+driver = webdriver.Chrome()
+ef_driver = EventFiringWebDriver(driver, MyListener())
+ef_driver.get("http://python.org")
+####################################################
