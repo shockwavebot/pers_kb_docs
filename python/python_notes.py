@@ -1,4 +1,10 @@
 
+
+
+##### generators
+range(5)
+(i for i in range(5)) # compared to list [i for i in range(5)]
+
 #########################################
 # list all modules in a package
 import pkgutil
