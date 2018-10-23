@@ -1,6 +1,13 @@
 
 
 
+
+
+# assign partial string and variable
+global_conf = '/path/to/conf'
+section = 'global'
+exec('path = ' + section + '_conf')
+
 ##### generators
 range(5)
 (i for i in range(5)) # compared to list [i for i in range(5)]
