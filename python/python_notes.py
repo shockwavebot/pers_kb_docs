@@ -2,6 +2,9 @@
 
 
 
+# to check lint the code
+python -m py_compile qa/tasks/deepsea_deploy.py
+flake8 qa/tasks/deepsea_deploy.py
 
 # assign partial string and variable
 global_conf = '/path/to/conf'
@@ -11,6 +14,16 @@ exec('path = ' + section + '_conf')
 ##### generators
 range(5)
 (i for i in range(5)) # compared to list [i for i in range(5)]
+
+def countdown(num):
+    print(num)
+    yield num
+    num -= 1
+
+g = countdown(5)
+type(g) # generator
+
+
 
 #########################################
 # list all modules in a package
