@@ -5,13 +5,14 @@
 # to check lint the code
 python -m py_compile qa/tasks/deepsea_deploy.py
 flake8 qa/tasks/deepsea_deploy.py
+pycodestyle --first  qa/tasks/deepsea_deploy.py
 
 # assign partial string and variable
 global_conf = '/path/to/conf'
 section = 'global'
-exec('path = ' + section + '_conf')
+exec('path = ' + section + '_conf') # linters will complain 
 
-##### generators
+##### generators ###########################################
 range(5)
 (i for i in range(5)) # compared to list [i for i in range(5)]
 
@@ -22,8 +23,7 @@ def countdown(num):
 
 g = countdown(5)
 type(g) # generator
-
-
+##### generators END ######################################
 
 #########################################
 # list all modules in a package
