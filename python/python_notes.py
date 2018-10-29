@@ -1,6 +1,21 @@
 
 
-
+#############################################################
+# monkey pathching
+>>> class Example:
+...     def add(self, a, b):
+...         return a + b
+...
+>>> instance = Example()
+>>> def add_more(self, a, b):
+...     return a + b + 10
+...
+>>> instance.add(1, 1)
+2
+>>> Example.add = add_more
+>>> instance.add(1, 1)
+12
+#############################################################
 
 # to check lint the code
 python -m py_compile qa/tasks/deepsea_deploy.py
@@ -10,7 +25,7 @@ pycodestyle --first  qa/tasks/deepsea_deploy.py
 # assign partial string and variable
 global_conf = '/path/to/conf'
 section = 'global'
-exec('path = ' + section + '_conf') # linters will complain 
+exec('path = ' + section + '_conf') # linters will complain
 
 ##### generators ###########################################
 range(5)
