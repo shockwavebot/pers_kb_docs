@@ -1,6 +1,20 @@
 
 
 #############################################################
+# iterator pattern
+def fib():
+   a, b = 0, 1
+   while True:
+      yield b
+      a, b = b, a + b
+
+f = fib()
+for i in range(20):
+    print(next(f), end=' ')
+print()
+#############################################################
+
+#############################################################
 # monkey pathching
 >>> class Example:
 ...     def add(self, a, b):
