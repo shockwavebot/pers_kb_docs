@@ -230,3 +230,6 @@ ab1442ff (HEAD -> qa-rgw_2_zones) qa test: rgw with 2 zones config
 eb253b92 Merge pull request #980 from smithfarm/wip-refresh-loop
 2197dc26 (origin/qa-rgw_2_zones) Signed-off-by: Marko Stanojlovic <mstanojlovic@suse.com>
 f44d1790 qa rgw 2 zones test - initial commit
+
+# remote branch got detached
+git reset --hard suse/ses6
