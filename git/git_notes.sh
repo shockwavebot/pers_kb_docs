@@ -233,3 +233,7 @@ f44d1790 qa rgw 2 zones test - initial commit
 
 # remote branch got detached
 git reset --hard suse/ses6
+
+# to set branch to track remote upstream branch
+git branch -u upstream/foo
+git branch --set-upstream-to=upstream/foo foo # if foo is not current branch
