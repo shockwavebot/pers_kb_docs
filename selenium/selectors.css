@@ -37,3 +37,6 @@ XPATH : //p[text()='Talented desciple']/parent::div
 Exluding elements
 CSS   : img:not(.frame)
 XPATH : //img[not(@class='frame')]
+
+XPATH contains class
+"//li[contains(@class, 'tier-1')]"
