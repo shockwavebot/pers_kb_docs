@@ -237,3 +237,6 @@ git reset --hard suse/ses6
 # to set branch to track remote upstream branch
 git branch -u upstream/foo
 git branch --set-upstream-to=upstream/foo foo # if foo is not current branch
+
+# git clone only one branches
+git clone -b wip-qa-repl_to_ec_2 --single-branch https://github.com/markostanojlovic/ceph.git
