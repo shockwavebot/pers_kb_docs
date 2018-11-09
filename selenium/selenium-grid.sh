@@ -20,3 +20,11 @@ java -jar selenium-server-standalone-3.9.1.jar -role node  -hub http://localhost
 driver = webdriver.Remote(
    command_executor='http://127.0.0.1:4444/wd/hub',
    desired_capabilities={'browserName': 'firefox', 'javascriptEnabled': True})
+
+#### headless and custom options for Chrome in grid
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('headless')
+chrome_options.add_argument('window-size=1920x1080')
+capabilities = {'browserName': 'chrome', 'javascriptEnabled': True}
+capabilities.update(chrome_options.to_capabilities())
+drv_chrome = webdriver.Remote(command_executor = 'http://192.168.122.60:4444/wd/hub', desired_capabilities = capabilities)
