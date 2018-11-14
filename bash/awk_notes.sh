@@ -13,6 +13,7 @@ awk '{print $0, "NovaColona"}' original.file # awk add column Dodaje novu kolonu
 awk '{ print $1, substr($2, 1, 4); }' original.file # Skracuje 2. Kolonu na 4 karaktera
 awk NF #delete blank lines remove empty lines
 awk -F “_” '{print $1}' #promena delimitera
-# print sentese each word one line 
+# print sentese each word one line
 echo 'this is a sample sentence'|awk '{for (i=1;i<=NF;i++) print $i}'
-
+# removing duplicate lines
+awk '!seen[$0]++' /etc/hosts > /tmp/hosts

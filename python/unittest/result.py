@@ -5,8 +5,7 @@ class TestExample(unittest.TestCase):
         self.assertTrue(True)
 
     def test_example_2(self):
-        # self.assertTrue(False, 'example of failed test')
-        assert False
+        self.assertTrue(False, 'example of failed test')
 
     @unittest.skip('example of skipped test')
     def test_example_3(self):
