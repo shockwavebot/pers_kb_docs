@@ -6,3 +6,6 @@ sudo zypper ar http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 wget https://dl.google.com/linux/linux_signing_key.pub
 sudo rpm --import linux_signing_key.pub
 sudo zypper in -y google-chrome-stable
+
+# -bash: ping: command not found
+sudo zypper install -y iputils

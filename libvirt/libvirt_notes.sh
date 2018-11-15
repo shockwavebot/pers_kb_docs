@@ -40,6 +40,23 @@ virsh domifaddr vmname
 
 # if not working, install qemu-guest-agent in the VM
 virsh domifaddr vmname --source agent --interface eth0
+
+<network>
+  <name>default</name>
+  <uuid>180b59e4-58c5-465e-805b-5fc1a0c8c994</uuid>
+  <forward mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+  </forward>
+  <bridge name='virbr0' stp='on' delay='0'/>
+  <mac address='52:54:00:f6:b3:80'/>
+  <ip address='192.168.122.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.122.2' end='192.168.122.254'/>
+    </dhcp>
+  </ip>
+</network>
 ##############################################################################
 
 
