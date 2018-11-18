@@ -1,4 +1,6 @@
 
+# format 2 decimal number when printing
+{:.2f}
 
 #############################################################
 # iterator pattern
