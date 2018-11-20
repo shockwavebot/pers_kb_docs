@@ -6,3 +6,6 @@ sudo sed -i "/StrictHostKeyChecking/c\StrictHostKeyChecking no" /etc/ssh/ssh_con
 
 # disable dhcp to set change host name
 sed -i '/^DHCLIENT_SET_HOSTNAME/c\DHCLIENT_SET_HOSTNAME="no"' /etc/sysconfig/network/dhcp
+
+# copy symbolic link, not the target
+cp -P link new_link
