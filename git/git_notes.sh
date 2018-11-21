@@ -58,6 +58,10 @@ git log --since=2.weeks
 git log -S change_string # only shows commits which have change_string as a change that is commited
 
 # UNDO
+
+# undo last commit
+git reset HEAD~
+
 # correct undo last commit
 git commit --amend
 # to unstage a file
