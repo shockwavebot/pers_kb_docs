@@ -7,6 +7,8 @@ import rpdb
 debugger = rpdb.Rpdb(port=12345)
 debugger.set_trace()
 
+rpdb.Rpdb(port=12345).set_trace()
+
 # to access the debugger
 telnet host port
 
@@ -15,6 +17,9 @@ n(ext) - Continue execution until the next line in the current function is reach
 r(eturn) - Continue execution until the current function returns.
 c(ont(inue)) - Continue execution, only stop when a breakpoint is encountered.
 q(uit) - Quit from the debugger. The program being executed is aborted.
+a(rgs) - Print the argument list of the current function.
+l(ist) [first[, last]] - List source code for the current file.
 
 ###
 dir() -- list of scope vars
+dir(obj_or_var) -- list all object attributes 
