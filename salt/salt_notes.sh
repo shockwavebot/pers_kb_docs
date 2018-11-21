@@ -10,37 +10,37 @@ iptables -A INPUT -m state --state new -m tcp –dport 4505 -j ACCEPT
 iptables -A INPUT -m state --state new -m tcp –dport 4506 -j ACCEPT
 
 /etc/salt/pki/master/minions 		# location of minion key
-salt-key # use to manage minion keys 
-salt-key --list-all 
-salt-key --accept-all 
+salt-key # use to manage minion keys
+salt-key --list-all
+salt-key --accept-all
 
-# locations 
-/srv/salt/_modules  # location of the custom modules 
+# locations
+/srv/salt/_modules  # location of the custom modules
 
 salt 'minion_name' test.ping
 salt 'minion_name' sys.list_functions test
 salt 'minion_name' sys.doc
 
-# running jobs in background
+# running jobs in background/detached/no wait/dont' wait for reply/no waiting 
 salt --async 'minion.fqdn' pkg.upgrade
-salt-run jobs.active 
+salt-run jobs.active
 salt-run jobs.print_job __job_id__
 
 salt 'minion.fqdn' saltutil.term_job __job_id__ # SIGTERM 15
 salt 'minion.fqdn' saltutil.kill_job __job_id__ # SIGKILL 9
 
 # running scripts on master
-salt-run 
+salt-run
 salt-run jobs.list_jobs
 
 # MASTERLESS execution:
-salt-call --local 
+salt-call --local
 salt-call test.version				# call salt command directly from minion
 
 # GRAINS
 salt '*' grains.ls
 salt '*' grains.items
-salt '*' grains.item os_family 
+salt '*' grains.item os_family
 salt '*' grains.setval training-server True 		# SETTING THE VALUE OF GRAIN, located in /etc/salt/grains
 salt '*' pkg.info_installed apache2 attr=version
 
@@ -54,7 +54,7 @@ salt --grain 'os_family:Debian' test.ping
 salt -C '*minion and G@os:Ubuntu and not L@yourminion,theirminion' test.ping
 salt -C 'I@roles:ganesha' cmd.run
 
-salt master.suse pkg.install apache2 
+salt master.suse pkg.install apache2
 salt '*' service.status apache2
 
 # execute a command on a remote system
@@ -71,11 +71,11 @@ salt ses4node2.qalab cp.push /etc/ceph/ceph.conf # destination is /var/cache/sal
 
 
 salt-call state.apply ceph.purge
-salt-call grains.item fqdn --out yaml|grep fqdn|awk -F ':' '{print $2}') # get the local fqdn 
+salt-call grains.item fqdn --out yaml|grep fqdn|awk -F ':' '{print $2}') # get the local fqdn
 
 # USEFUL modules.functions
 user.add
-pkg.install 
+pkg.install
 pkg.remove
 pkg.version
 pkg.list_pkgs
@@ -83,7 +83,7 @@ service.restart
 service.enabled ceph-radosgw@
 status.diskusage
 
-# CREATE A CUSTOM MODULE 
+# CREATE A CUSTOM MODULE
 # buildin example
 /usr/lib/python2.7/site-packages/salt/modules/
 
@@ -133,7 +133,7 @@ install_apache:
 make sure is up and running:
   service.running:
     - name: apache2
-    - enable: True 
+    - enable: True
 
 salt \* state.sls apache
 ###############################
@@ -156,21 +156,21 @@ salt-run jobs.active
 salt \* saltutil.term_job
 salt \* saltutil.kill_job
 
-# create and apply states: 
+# create and apply states:
 1. create sls init file:    /srv/salt/apache/init.sls
 2. create top file:         /srv/salt/top.sls
 3. apply state:             salt \* state.apply apache.init
 
 
 ########################
-# SALT RUNNER 
+# SALT RUNNER
 ########################
 salt-run state.orch ceph.stage.2 # orchestration path: /srv/salt/ceph
 # to get help use salt:
-salt ses5node1.qatest sys.list_functions state 
+salt ses5node1.qatest sys.list_functions state
 
-# increase verbosity 
---log-level=debug 
+# increase verbosity
+--log-level=debug
 
 ##################
 INSTALL centos
@@ -185,7 +185,7 @@ gpgcheck=1
 gpgkey=https://repo.saltstack.com/yum/redhat/$releasever/$basearch/latest/SALTSTACK-GPG-KEY.pub
        https://repo.saltstack.com/yum/redhat/$releasever/$basearch/latest/base/RPM-GPG-KEY-CentOS-7
 
-# to run module from a salt state file 
+# to run module from a salt state file
 {% for id in salt.saltutil.runner('rescinded.ids', cluster='ceph') %}
 drain osd.{{ id }}:
   module.run:
@@ -196,24 +196,24 @@ drain osd.{{ id }}:
 ###########################################
 # SALT TRAINING
 ###########################################
-salt cloud - moze da radi i provisioning u cloudu 
-salt ssh - za install miniona 
+salt cloud - moze da radi i provisioning u cloudu
+salt ssh - za install miniona
 
 /etc/salt/minion_id #
 
 # modules
-__virtualname__ # important - salt name of the module 
-def __virtual__ (): # defines if module will be loaded 
+__virtualname__ # important - salt name of the module
+def __virtual__ (): # defines if module will be loaded
 
-# get nested grain key 
+# get nested grain key
 salt-call grains.get key1:nested_key
 
-salt-run manage.up  # systems which are up 
-salt-run manage.down 
+salt-run manage.up  # systems which are up
+salt-run manage.down
 
-salt [target] sys.list_runner_functions 
+salt [target] sys.list_runner_functions
 
-# getting more output  
+# getting more output
 -l debug
 
 # *** TIP: probaj da nedjes module and function rather than cmd.run, example is JSON output ***
@@ -221,8 +221,8 @@ salt [target] sys.list_runner_functions
 # salt states
 hosts_file:
   file.managed:
-    - name: /etc/hosts 
-    - contents: | 
+    - name: /etc/hosts
+    - contents: |
       127.0.0.1 localhost
 
 sync mod_status.conf:
@@ -232,46 +232,31 @@ sync mod_status.conf:
     - user: root
     - group: root
     - mode: 600
-  
+
 salt [target] sys.list_state_modules
-salt [target] sys.list_state_functions # to list names of functions for state file 
+salt [target] sys.list_state_functions # to list names of functions for state file
 salt [target] state.apply name_of_state_file
 
-salt [target] state.show_sls state_name # checking syntax of state file 
-salt [target] state.sls state_name test=True # dry run of state # or use state.apply 
-salt [target] state.show_highstate # checking the highstate  
+salt [target] state.show_sls state_name # checking syntax of state file
+salt [target] state.sls state_name test=True # dry run of state # or use state.apply
+salt [target] state.show_highstate # checking the highstate
 
-onchanges - only on change will do action 
-watch - on any change, it will do action *recommended 
+onchanges - only on change will do action
+watch - on any change, it will do action *recommended
 
-use - using block as template - saving typing 
+use - using block as template - saving typing
 
-# Jinja - dynamic states 
+# Jinja - dynamic states
 {{ set var = 'value' }}
 {{ grains.os }}
-{{ sls }} # file name 
-{{ sls_path }} # path of the sls  
-# macro - for writing functions 
+{{ sls }} # file name
+{{ sls_path }} # path of the sls
+# macro - for writing functions
 
-# saltstack formulas - already writen states fro common use cases 
+# saltstack formulas - already writen states fro common use cases
 
 ###########################################
 
 
-# remove minion 
+# remove minion
 salt-key -d minion_name
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
