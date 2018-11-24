@@ -52,3 +52,12 @@ driver = webdriver.Chrome()
 ef_driver = EventFiringWebDriver(driver, MyListener())
 ef_driver.get("http://python.org")
 ####################################################
+
+####################################################
+# handling select options drop down menu
+from selenium.webdriver.support import select
+
+ddm = select.Select(driver.find_element_by_id('designation'))
+ddm.select_by_value('prog')
+
+####################################################
