@@ -146,6 +146,7 @@ connection.login('soundwavetesting', 'password')
 connection.sendmail('soundwavetesting@gmail.com', 'stanojlovic.marko@gmail.com', 'Subject: test message\n\nMessage start...')
 connection.quit()
 
+############################################################
 # date time
 from datetime import date, timedelta
 yesterday = date.today() - timedelta(1)
@@ -154,6 +155,10 @@ yesterday.strftime('%Y-%m-%d')
 from datetime import datetime
 from datetime import timedelta
 print datetime.now()+timedelta(days=90)
+# Formating
+mydate.strftime("%Y-%m-%d %H:%M:%S")
+
+############################################################
 
 # matchin a cell in the excel file
 import re
