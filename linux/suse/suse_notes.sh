@@ -9,3 +9,6 @@ sudo zypper in -y google-chrome-stable
 
 # -bash: ping: command not found
 sudo zypper install -y iputils
+
+# libvirt cd as repos
+zypper ar 'cd:///?devices=/dev/disk/by-id/scsi-0QEMU_QEMU_CD-ROM_drive-scsi0-0-0-1' slepkg
