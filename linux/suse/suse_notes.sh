@@ -11,4 +11,9 @@ sudo zypper in -y google-chrome-stable
 sudo zypper install -y iputils
 
 # libvirt cd as repos
-zypper ar 'cd:///?devices=/dev/disk/by-id/scsi-0QEMU_QEMU_CD-ROM_drive-scsi0-0-0-1' slepkg
+zypper ar 'cd:///?devices=/dev/disk/by-id/scsi-0QEMU_QEMU_CD-ROM_drive-scsi0-0-0-1' sle
+
+# add repo as iso
+iso_path=/tmp/SLE-15-SP1-Packages-x86_64-Alpha3-DVD1.iso
+repo_name=sle
+zypper ar -c -f "iso:/?iso=$iso_path" $repo_name

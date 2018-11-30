@@ -275,11 +275,20 @@ return response.get(phraseType, 'Whatever.')
 
 #####################################################
 
+#####################################################
 # random string of N lenght
 import string
 import random
 N = 8
 ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(N))
+
+# random robot-name example
+import random
+from random import seed # to seed randomness from current time
+from string import ascii_uppercase as AZ
+from string import digits
+rrname = ''.join(random.sample(ascii_uppercase,2)) + ''.join(random.sample(digits, 3))
+#####################################################
 
 # iterate trough array
 for i in range(0,len(a)):
