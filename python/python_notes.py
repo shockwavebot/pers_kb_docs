@@ -1,4 +1,5 @@
-
+# python pep8 checked
+pycodestyle  --first file.py 
 
 #############################################################
 # string manipulation
