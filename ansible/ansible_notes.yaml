@@ -57,3 +57,108 @@
 
 # rerun ansible playbook only failed targets
 ansible-playbook myplaybook.yaml --limit @myplaybook.retry
+
+
+
+
+# Install ansible in python virtualenv - required ansible >=3.5
+pip install ansible
+pip install shade
+
+# pip install -r requirements.txt
+# requirements.txt:
+python-openstackclient==3.12.0
+python-ironicclient==1.17.0
+python-keystoneclient==3.13.0
+python-neutronclient==6.2.0
+python-novaclient==9.1.0
+simplejson==3.11.1
+os-client-config==1.28.0 #Note: 1.31.1 CAUSES the problem
+osc-lib==1.7.0
+oslo.config==4.11.0
+oslo.i18n==3.17.0
+oslo.serialization==2.20.0
+oslo.utils==3.33.0
+
+
+# /etc/ansible/hosts
+localhost        ansible_connection=local
+
+
+# playbook for openstack
+	- name: launch a compute instance
+  hosts: localhost
+  tasks:
+    - name: launch an instance
+      os_server:
+        name: qa_ses_test
+      	wait: yes
+        image: SLES12-SP3
+        key_name: mstan
+        timeout: 200
+        flavor: m1.medium
+        network: sesci
+        auto_floating_ip: yes
+        meta:
+          hostname: qa_ses_test.qalab
+
+# post setup playbook
+---
+- hosts:
+    - admin
+    - nodes
+  vars:
+    logs: "."
+    password: "jeZ/p6jM.Gl0E"
+  remote_user: root
+  name: Setup users
+  tasks:
+      - user: name=jenkins shell=/bin/bash password={{ password }}
+      - name: Placing Default Key for jenkins
+        authorized_key: user=jenkins key={{lookup('file', '~/.ssh/id_rsa.pub') }}
+      - name: Placing Storage Automation Key for jenkins
+        authorized_key: user=jenkins key={{lookup('file', '~/.ssh/sa.pub') }}
+      - name: Placing Key for root
+        authorized_key: user=root key={{lookup('file', '~/.ssh/id_rsa.pub') }}
+      - lineinfile: dest=/etc/sudoers state=present line='jenkins ALL = (root) NOPASSWD:ALL' validate='visudo -cf %s'
+      - lineinfile: dest=/etc/ssh/ssh_config state=present line='Host * \nStrictHostKeyChecking no'
+      - lineinfile: dest=/etc/ssh/ssh_config state=present line='Host * \nUserKnownHostsFile /home/jenkins/.ssh/known_hosts'
+      - mount: name=/mnt src=/dev/vdb fstype=xfs state=unmounted
+      - mount: name=/mnt src=/dev/vdb fstype=xfs state=absent
+
+# hostnames setup playbook
+---
+- hosts:
+    - admin
+    - nodes
+  vars:
+    nameserver: "158.69.69.166"
+    hostname_format: "ci-%03d-%03d-%03d-%03d"
+  remote_user: root
+  name: 'Setup host names'
+  tasks:
+      - name: set nameserver
+        shell: |
+            sed -E -i 's/\s*nameserver\s+[0-9.]+/nameserver {{ nameserver }}/g' /etc/resolv.conf
+            sed -E -i 's/\s*search\s+/search ovh.suse.de /g' /etc/resolv.conf
+      - name: set hostname
+        shell: |
+            hostnamectl set-hostname \
+                $(printf "{{ hostname_format }}" \
+                    $(echo {{ inventory_hostname }} | sed 's/\./ /g'))
+
+# disable firewall playbook
+---
+- hosts:
+    - admin
+  remote_user: root
+  tasks:
+      - name: disable firewall
+        shell: |
+            systemctl disable SuSEfirewall2.service
+            systemctl stop SuSEfirewall2.service
+            systemctl status SuSEfirewall2.service|grep 'Loaded:'|awk -F ';' '{print $2}'|grep disabled
+            systemctl status SuSEfirewall2.service|grep 'inactive (dead)'
+        register: out
+
+      - debug: var=out.stdout_lines
