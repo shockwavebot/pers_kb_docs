@@ -17,3 +17,5 @@ awk -F “_” '{print $1}' #promena delimitera
 echo 'this is a sample sentence'|awk '{for (i=1;i<=NF;i++) print $i}'
 # removing duplicate lines
 awk '!seen[$0]++' /etc/hosts > /tmp/hosts
+# remove first and second column
+awk '{$1="";$2=""}1'
