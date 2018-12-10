@@ -1,5 +1,8 @@
+# copy a list instead of passing a reference
+b = a[:]
+
 # python pep8 checked
-pycodestyle  --first file.py 
+pycodestyle  --first file.py
 
 #############################################################
 # string manipulation
