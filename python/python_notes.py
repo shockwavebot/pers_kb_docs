@@ -1,3 +1,17 @@
+# permutations/combinations
+from itertools import combinations_with_replacement
+comb = combinations_with_replacement([i for i in range(1,4)], 2)
+# >>> for i in comb:
+# ...     print(i)
+# ...
+# (1, 1)
+# (1, 2)
+# (1, 3)
+# (2, 2)
+# (2, 3)
+# (3, 3)
+# >>> 
+
 # copy a list instead of passing a reference
 b = a[:]
 
@@ -8,7 +22,7 @@ pycodestyle  --first file.py
 # string manipulation
 # string methods https://docs.python.org/3/library/stdtypes.html#string-methods
 import string
-'rema car'.replace('car','kralj')
+'rema car'.replace('car','kralj')y
 str_to_dict = set('car')
 str_to_dict.issubset('rema car')
 
