@@ -1,3 +1,10 @@
+
+
+
+
+# conditional one-liner
+return (('abundant', 'perfect')[aliquot == number], 'deficient')[aliquot < number]
+
 # permutations/combinations
 from itertools import combinations_with_replacement
 comb = combinations_with_replacement([i for i in range(1,4)], 2)
@@ -10,7 +17,7 @@ comb = combinations_with_replacement([i for i in range(1,4)], 2)
 # (2, 2)
 # (2, 3)
 # (3, 3)
-# >>> 
+# >>>
 
 # copy a list instead of passing a reference
 b = a[:]
