@@ -1,6 +1,8 @@
 
 
-
+# counter - counting repeated elements in a list/string/
+from collections import Counter
+Counter([1,1,2,2,2,3])
 
 # conditional one-liner
 return (('abundant', 'perfect')[aliquot == number], 'deficient')[aliquot < number]
