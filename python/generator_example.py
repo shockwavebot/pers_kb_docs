@@ -1,3 +1,6 @@
+# convertng string to iterator
+iter('hello')
+
 def simple_generator_function():
     print('Before 1')
     yield 1
