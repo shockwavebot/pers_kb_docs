@@ -1,8 +1,21 @@
 
 
+############################################################################
 # counter - counting repeated elements in a list/string/
 from collections import Counter
 Counter([1,1,2,2,2,3])
+
+sum(c.values())                 # total of all counts
+c.clear()                       # reset all counts
+list(c)                         # list unique elements
+set(c)                          # convert to a set
+dict(c)                         # convert to a regular dictionary
+c.items()                       # convert to a list of (elem, cnt) pairs
+Counter(dict(list_of_pairs))    # convert from a list of (elem, cnt) pairs
+c.most_common()[:-n-1:-1]       # n least common elements
+c += Counter()                  # remove zero and negative counts
+############################################################################
+
 
 # conditional one-liner
 return (('abundant', 'perfect')[aliquot == number], 'deficient')[aliquot < number]
@@ -194,7 +207,6 @@ In [4]: foo(*list)
 # list comperhensions
 return [x for x in servers if x.servers.contains(query)]
 
-pip install flask    	 # web application in python
 ======================
 #creating and assigning list is only assigning references, for copy the list use:
 import copy
