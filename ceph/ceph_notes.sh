@@ -3,7 +3,7 @@ export PS1='\e[1;91m[ceph:\w ]$ \e[m'
 Ceph Cheatsheet: https://sabaini.at/pages/ceph-cheatsheet.html
 
 
-systemctl start/stop ceph.target				# start/stop ceph service 
+systemctl start/stop ceph.target				# start/stop ceph service
 salt '*' cmd.run 'systemctl stop ceph.target'
 salt '*' cmd.run 'systemctl start ceph.target'
 
@@ -220,3 +220,9 @@ ceph -n mon.rock229 --show-config|grep mon_max_pg_per_osd
 
 # set some custom conig
 ceph config set mon_max_pg_per_osd 4000
+
+
+# dashboard v2
+ceph mgr module enable dashboard --force
+ceph config set mgr mgr/dashboard/ssl false
+ceph dashboard set-login-credentials admin admin
