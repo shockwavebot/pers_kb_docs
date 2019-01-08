@@ -9,3 +9,6 @@ sed -i '/^DHCLIENT_SET_HOSTNAME/c\DHCLIENT_SET_HOSTNAME="no"' /etc/sysconfig/net
 
 # copy symbolic link, not the target
 cp -P link new_link
+
+# convert ssh private key to ppk file that can be used in putty (install putty-tools)
+puttygen keyname -o keyname.ppk
