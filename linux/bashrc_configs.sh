@@ -1,4 +1,4 @@
-
+alias l='ls -la --color=auto'
 
 # configure git branch to be displayed in prompt line:
 parse_git_branch() {
