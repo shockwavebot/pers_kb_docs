@@ -1,5 +1,10 @@
 
 
+# split string in nth substrings
+import re
+re.findall("\w{3}", the_string)
+
+
 ############################################################################
 # counter - counting repeated elements in a list/string/
 from collections import Counter
