@@ -1,4 +1,7 @@
 
+# saving code in function definitions: setattr() + lambda + list(set)
+calc = lambda p: round(seconds / p, 2)
+setattr(self, 'on_' + planet, calc)
 
 # split string in nth substrings
 import re
