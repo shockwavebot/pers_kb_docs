@@ -335,6 +335,8 @@ from random import seed # to seed randomness from current time
 from string import ascii_uppercase as AZ
 from string import digits
 rrname = ''.join(random.sample(ascii_uppercase,2)) + ''.join(random.sample(digits, 3))
+# simulating trowing 4 times a dice:
+[random.randint(1,6) for i in range(4)]
 #####################################################
 
 # iterate trough array
