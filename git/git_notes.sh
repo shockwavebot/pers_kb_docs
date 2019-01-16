@@ -16,6 +16,8 @@ git config --global http.sslVerify false # WORKING
 
 # directory to ignore from commits
 .git/info/exclude
+# to exclude dir and subir in thre tree structure
+**/dir_name/*
 
 # update credentials
 git credential reject
