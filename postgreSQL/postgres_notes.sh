@@ -49,3 +49,8 @@ CREATE TABLE playground (
     install_date date
 );
 
+# Check DB/table size
+SELECT pg_size_pretty( pg_database_size('dbname') );
+SELECT pg_size_pretty( pg_total_relation_size('tablename') );
+
+
