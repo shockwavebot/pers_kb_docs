@@ -53,4 +53,8 @@ CREATE TABLE playground (
 SELECT pg_size_pretty( pg_database_size('dbname') );
 SELECT pg_size_pretty( pg_total_relation_size('tablename') );
 
+# Vacuum - reclaiming space used by updated data, Analyze optimizes for query  
+select name, setting from pg_settings where name = 'autovacuum';
+VACUUM(FULL, ANALYZE, VERBOSE) [tablename]
+
 
