@@ -18,10 +18,19 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y code
 ## install git
-sudo apt-get install -y git-core
+sudo apt-get install -y git
 ## install simple screen recorder
 sudo apt-get install -y simplescreenrecorder
 ## install video editor: kdevlive
 sudo apt-get install -y kdenlive
 # enable ssh service
 sudo apt-get install -y openssh-server
+################################################################################
+# popcorntime
+sudo apt update && sudo apt install libcanberra-gtk-module libgconf-2-4
+# get pkg: https://get.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz
+sudo mkdir /opt/popcorntime
+cd ~/Downloads
+sudo tar Jxf Popcorn-Time-* -C /opt/popcorntime
+sudo ln -sf /opt/popcorntime/Popcorn-Time /usr/bin/Popcorn-Time
+################################################################################
