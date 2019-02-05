@@ -12,3 +12,8 @@ sudo sed -i '/^\%sudo/c\\%sudo ALL=\(ALL\:ALL\) NOPASSWD\: ALL' /etc/sudoers
 
 # location of background wallpapers
 /usr/share/backgrounds/
+
+# bootable usb install
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install -y woeusb
