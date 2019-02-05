@@ -12,3 +12,9 @@ cp -P link new_link
 
 # convert ssh private key to ppk file that can be used in putty (install putty-tools)
 puttygen keyname -o keyname.ppk
+
+# passwordless sudo 
+echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+
+
+
