@@ -23,7 +23,5 @@ sudo apt-get install -y git-core
 sudo apt-get install -y simplescreenrecorder
 ## install video editor: kdevlive
 sudo apt-get install -y kdenlive
-
-
 # enable ssh service
 sudo apt-get install -y openssh-server
