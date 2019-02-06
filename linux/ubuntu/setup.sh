@@ -6,7 +6,7 @@ sudo apt-get install -y google-chrome-stable
 ## install opera
 sudo snap install opera
 ## install atom
-sudo add-apt-repository ppa:webupd8team/atom
+sudo add-apt-repository ppa:webupd8team/atom -y
 sudo apt update
 sudo apt install -y atom
 ## install vs code
