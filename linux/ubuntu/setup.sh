@@ -32,5 +32,5 @@ sudo apt update && sudo apt install libcanberra-gtk-module libgconf-2-4
 sudo mkdir /opt/popcorntime
 cd ~/Downloads
 sudo tar Jxf Popcorn-Time-* -C /opt/popcorntime
-sudo ln -sf /opt/popcorntime/Popcorn-Time /usr/bin/Popcorn-Time
+sudo ln -sf /opt/popcorntime/Popcorn-Time /usr/bin/popcorntime
 ################################################################################
