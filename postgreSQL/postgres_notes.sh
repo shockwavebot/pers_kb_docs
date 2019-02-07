@@ -49,6 +49,9 @@ CREATE TABLE playground (
     install_date date
 );
 
+# drop/delete a rable 
+DROP TABLE IF EXISTS table_name;
+
 # Check DB/table size
 SELECT pg_size_pretty( pg_database_size('dbname') );
 SELECT pg_size_pretty( pg_total_relation_size('tablename') );
@@ -56,5 +59,10 @@ SELECT pg_size_pretty( pg_total_relation_size('tablename') );
 # Vacuum - reclaiming space used by updated data, Analyze optimizes for query  
 select name, setting from pg_settings where name = 'autovacuum';
 VACUUM(FULL, ANALYZE, VERBOSE) [tablename]
+
+# Force switch to a new transaction log file (restricted to superusers)
+select pg_switch_xlog();
+
+
 
 
