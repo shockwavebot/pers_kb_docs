@@ -326,3 +326,10 @@ tst=$(printf "%05g" 44);echo $tst
 ###########################################################################
 ###########################################################################
 
+# Checking if command/programm/alias/function exists 
+command -v <the_command> 	# POSIX compatible
+hash <the_command> 		# BASH specific: For regular commands. Or...
+type <the_command> 		# BASH specific: To check built-ins and keywords
+
+
+
