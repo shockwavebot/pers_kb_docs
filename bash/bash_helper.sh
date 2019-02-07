@@ -1,3 +1,10 @@
+# example of function defined in ~/.bashrc
+function ssh_to_db {
+    [[ $# -ne 1 ]] && { echo "ERR: Missing argument. Enter db trigram. Example: nca" >&2; return 2; }
+    hash envinfo || { echo "ERR: Attach to your env." >&2; return 3; }
+    ssh enterprisedb@$(envinfo|grep $1|awk '{print $4}')
+}
+
 function num_of_free_disks {
 	DISKS=$(lsblk|grep disk|awk '{print $1}')
 	echo 'Disks present on the host ' $HOSTNAME ' : ' $DISKS
