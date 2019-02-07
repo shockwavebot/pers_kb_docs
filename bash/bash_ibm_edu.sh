@@ -34,7 +34,8 @@ $ exec n>&-  	# Closes output file descriptor n
 $ exec n<&-  	# Closes input file descriptor n
 
 ### Command grouping ###
-( command1 ; command2 ) > /dev/null 2>&1
+( command1; command2 ) > /dev/null 2>&1
+{ command1; command2; } # zgodno za one line checks u funkcijama
 
 ### Shell job controll ###
 jobs 	# The jobs command lists your current Shell processes and their job ids
