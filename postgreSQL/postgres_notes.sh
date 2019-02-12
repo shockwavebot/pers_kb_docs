@@ -63,6 +63,7 @@ VACUUM(FULL, ANALYZE, VERBOSE) [tablename]
 # Force switch to a new transaction log file (restricted to superusers)
 select pg_switch_xlog();
 
-
+# Looking for table with specific column
+select table_name, column_name from information_schema.columns where column_name like '%order%';
 
 
