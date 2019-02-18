@@ -54,6 +54,7 @@ $* 	# in double quotes, behaves different than $@
 
 $0	# path name of the script
 $$	# PID of current process
+$!      # PID of the most recently executed background pipeline
 $?	# Return code 
 
 export VAR 	# exportst variable VAR so it's inherited to other shells, but only creates a copy, it's not linked
