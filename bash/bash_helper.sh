@@ -67,6 +67,9 @@ ssh ses5node1 'bash -s' < ./tst.sh ses5node1
 # remote exec ssh block 
 ssh root@$hostname << EOSSH >> $LOG 2>&1
 #commands
+# *** IMPORTANT! ***
+# with $VAR is local variable 
+# with \$VAR_REMOTE is the the remote variable 
 EOSSH
 
 # change password without prompt
