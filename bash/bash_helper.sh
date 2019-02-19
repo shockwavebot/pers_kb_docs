@@ -1,3 +1,9 @@
+
+# get date 5 minutes before or after 
+date --date='5 minutes ago' # 5min ago
+date # how 
+date --date='5 minutes' # in 5min in from now
+
 # list all directores/subdirs 
 ls -d /path/*/
 
