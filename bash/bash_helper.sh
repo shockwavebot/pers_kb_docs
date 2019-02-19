@@ -1,4 +1,4 @@
-# list all directores and subdirs 
+# list all directores/subdirs 
 ls -d /path/*/
 
 # example of function defined in ~/.bashrc
