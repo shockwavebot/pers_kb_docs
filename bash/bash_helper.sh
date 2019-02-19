@@ -1,3 +1,6 @@
+# list all directores and subdirs 
+ls -d /path/*/
+
 # example of function defined in ~/.bashrc
 function ssh_to_db {
     [[ $# -ne 1 ]] && { echo "ERR: Missing argument. Enter db trigram. Example: nca" >&2; return 2; }
