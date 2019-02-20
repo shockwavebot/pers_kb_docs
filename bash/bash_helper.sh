@@ -1,4 +1,11 @@
 
+
+
+
+
+# check if command is available and exit script with rc and message 
+command || { echo "What is wrong message." && exit 33; }
+
 # get date 5 minutes before or after 
 date --date='5 minutes ago' # 5min ago
 date # how 
