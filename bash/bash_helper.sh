@@ -1,7 +1,9 @@
 
 
 
-
+# stop script on error, but don't exit the shell, when script is sourced in current shell
+set -e 
+command || return 0
 
 # check if command is available and exit script with rc and message 
 command || { echo "What is wrong message." && exit 33; }
