@@ -256,7 +256,9 @@ from datetime import timedelta
 print datetime.now()+timedelta(days=90)
 # Formating
 mydate.strftime("%Y-%m-%d %H:%M:%S")
-
+# get datetime from a string 
+import datetime
+datetime.datetime.strptime('2019-02-27 1:33PM', '%Y-%m-%d %I:%M%p')
 ############################################################
 
 # matchin a cell in the excel file
