@@ -259,6 +259,8 @@ mydate.strftime("%Y-%m-%d %H:%M:%S")
 # get datetime from a string 
 import datetime
 datetime.datetime.strptime('2019-02-27 1:33PM', '%Y-%m-%d %I:%M%p')
+# to update time: 
+mydate.replace(hour=14, minute=00)
 ############################################################
 
 # matchin a cell in the excel file
