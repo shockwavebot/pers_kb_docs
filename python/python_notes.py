@@ -1,5 +1,5 @@
 # interate dictionary
-for key, value in d.iteritems():
+for key, value in d.items():
 
 # pretty pring of json 
 import json
