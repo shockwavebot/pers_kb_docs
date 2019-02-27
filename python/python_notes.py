@@ -1,3 +1,5 @@
+# interate dictionary
+for key, value in d.iteritems():
 
 # pretty pring of json 
 import json
