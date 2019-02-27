@@ -1,5 +1,8 @@
 
-
+# decimal to binary converter by using braces to build sequence
+dec2bin=({0..1}{0..1}{0..1}) # () are making the array 
+echo ${dec2bin[2]}
+010
 
 # stop script on error, but don't exit the shell, when script is sourced in current shell
 set -e 
