@@ -174,6 +174,10 @@ def countdown(num):
 
 g = countdown(5)
 type(g) # generator
+
+# *** invoke generator iteration ***
+list((i for i in iterable))
+
 ##### generators END ######################################
 
 #########################################
