@@ -34,7 +34,8 @@ c += Counter()                  # remove zero and negative counts
 
 
 # conditional one-liner
-return (('abundant', 'perfect')[aliquot == number], 'deficient')[aliquot < number]
+
+(('abundant', 'perfect')[aliquot == number], 'deficient')[aliquot < number]
 
 # permutations/combinations
 from itertools import combinations_with_replacement
@@ -381,3 +382,8 @@ soup=bs4.BeautifulSoup(webpage.text, 'html.parser')
 elem = soup.select('#content > div > ul > li > a')
 file_path=elem[0].get('href')
 file_url='http://www.mvcr.cz/mvcren/'+file_path
+                    
+# FILE MGM
+with open('/your/path/file') as f:
+    for line in f:
+        process(line)
