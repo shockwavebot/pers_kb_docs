@@ -11,6 +11,8 @@ table = Table('table_name', metadata, autoload=True, autoload_with=engine)
 
 # SELECT
 from sqlalchemy import select
-stmt = select([table.c.order_id, table.c.creation_time]).where(table.columns.order_id == '1001')
+stmt = select([table.c.order_id, table.c.creation_time]).where(
+                                    (table.c.order_id == '1001') &
+                                    (table.c.timestamp < datetime.datetime.now()))
 results = connection.execute(stmt).fetchall()
 
