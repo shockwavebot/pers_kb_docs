@@ -1,3 +1,6 @@
+# convert string to a dict, example when reading from a file
+my_dict = eval("{'key': 'value'}")
+
 # interate dictionary
 for key, value in d.items():
 
@@ -12,7 +15,6 @@ setattr(self, 'on_' + planet, calc)
 # split string in nth substrings
 import re
 re.findall("\w{3}", the_string)
-
 
 ############################################################################
 # counter - counting repeated elements in a list/string/
