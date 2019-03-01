@@ -13,3 +13,6 @@
 DELETE FROM table_name WHERE [condition];
 SELECT * FROM tt_tab_test WHERE vistor_id <= 4; # to verify what will be deleted, if condition is OK 
 DELETE FROM tt_tab_test WHERE vistor_id <= 4;
+
+# value in range
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
