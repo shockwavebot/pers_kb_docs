@@ -272,12 +272,6 @@ datetime.datetime.strptime('2019-02-27 1:33PM', '%Y-%m-%d %I:%M%p')
 mydate.replace(hour=14, minute=00)
 ############################################################
 
-# matchin a cell in the excel file
-import re
-p=re.compile('.*filename.*')
-match=p.march(cell)
-
-
 #>>> list(zip(['a','b','c'],[1,2,3]))
 #[('a', 1), ('b', 2), ('c', 3)]
 
@@ -297,7 +291,7 @@ u'M\u011bstsk\xe1 \u010d\xe1st:'.encode('utf8') # unicode to string
 
 # FOR LOOP
 for x in range(0, 3):
-    print "We're on time %d" % (x)
+    print(f"We're on time {x}") # pringin by using f-strings
 
 #####################################################
 # CASE statement
