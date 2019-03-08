@@ -7,10 +7,16 @@ wb.sheetnames            # to get the tab or sheet names
 ws = wb['tab_name']
 # search for a value in a cell 
 
-def search(ws, val, row=None, col=None):
+def search_first(ws, val):
     for col in ws.iter_cols():
         for cell in col:
             if cell.value == val:
                 return (cell.row, cell.column)
                   
-             
+def search_all(ws, val):
+    result = []
+    for col in ws.iter_cols():
+        for cell in col:
+            if cell.value == val:
+                result.append((cell.row, cell.column))
+    return result
