@@ -1,5 +1,9 @@
 # working with excel spreadsheets
 
+from openpyxl.utils import get_column_letter
+# >>> get_column_letter(3)
+# 'C'
+
 # getting info from table in readonly mode
 from openpyxl import load_workbook
 wb = load_workbook(filename='spreadsheet_file.xlsx')
@@ -20,3 +24,11 @@ def search_all(ws, val):
             if cell.value == val:
                 result.append((cell.row, cell.column))
     return result
+
+def print_ws(ws):
+    for row_cells in ws.iter_rows():
+        row = '| '
+        for cell in row_cells:
+            row+= str(cell.value) + ' | '
+        print(row)
+        
