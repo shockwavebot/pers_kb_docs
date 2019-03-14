@@ -66,4 +66,11 @@ select pg_switch_xlog();
 # Looking for table with specific column
 select table_name, column_name from information_schema.columns where column_name like '%order%';
 
+# time, checking, querying the current time
+select now();
+select current_date;
+select current_time;
+
+
+
 
