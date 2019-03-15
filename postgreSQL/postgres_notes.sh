@@ -71,6 +71,9 @@ select now();
 select current_date;
 select current_time;
 
+# setting configuring log level : change postgresql.conf
+log_min_messages = debug1
+
 
 
 
