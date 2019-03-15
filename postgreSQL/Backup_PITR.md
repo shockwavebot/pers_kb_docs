@@ -58,5 +58,10 @@ LABEL: TT_BD20190314
 
 When PostgreSQL starts up, it enters into PITR mode if there are a recovery.conf and a backup_label in the database cluster.
 
+#### To get the current timeline 
+
+`SELECT substr(pg_xlogfile_name(pg_current_xlog_location()), 1, 8);` or check the WAL dir, pg_xlog dir, and see that are the latest WAL files named, as well, check the history file in WAL dir
+
+
 
 
