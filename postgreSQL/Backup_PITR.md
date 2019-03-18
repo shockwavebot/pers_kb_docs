@@ -28,6 +28,8 @@ WAL location: `/var/lib/ppas/<DB_NAME>/9.6/data/pg_xlog`
 
 WAL archive location: `/path/to/WAL/archive/location/`
 
+`pg_resetxlog` -- reset the write-ahead log and other control information of a PostgreSQL database cluster
+
 ## Backup process 
 
 ### pg_start_backup
