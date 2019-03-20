@@ -35,7 +35,7 @@ git credential fill
 # remving a file: remove it from working directory rm file_name; then git rm
 git rm file_name
 # to bring back removed file
-git reset HEAD
+git reset HEAD file_name
 git checkout -- file_name
 
 # keep the file locally, but do not track it, and it's not in gitignore list
@@ -70,7 +70,7 @@ git commit --amend
 git reset HEAD file_name
 # Unmodifying a Modified File
 git checkout -- file_name
-git checkout -- . # for all files
+git checkout -- . # for all files, reset all files, bring back deleted files 
 
 # REMOTES
 git clone https://github.com/schacon/ticgit
