@@ -10,5 +10,5 @@ oc projects         # list projects
 oc project myproj   # switch to myproj
 
 oc get all 
-
+oc describe <resource>/<name>
 
