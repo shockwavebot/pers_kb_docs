@@ -75,6 +75,8 @@ select current_time;
 # setting configuring log level : change postgresql.conf
 log_min_messages = debug1
 
+# get number of rows, count rows, count table entries
+SELECT COUNT(*) FROM TABLE_NAME;
 
 
 
