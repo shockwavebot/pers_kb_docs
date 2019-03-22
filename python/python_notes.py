@@ -15,6 +15,8 @@ setattr(self, 'on_' + planet, calc)
 # split string in nth substrings
 import re
 re.findall("\w{3}", the_string)
+# alternative is s=string , n=size
+[s[i:i+n] for i in range(0, len(s), n)]
 
 ############################################################################
 # counter - counting repeated elements in a list/string/
