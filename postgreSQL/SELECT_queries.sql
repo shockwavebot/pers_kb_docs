@@ -1,5 +1,6 @@
 # last 5 minutes 
 select id, creation_time from ct_table where creation_time >= now() - interval '5 minutes';
+select something where my_timestamp < to_timestamp('25-03-2019 14:30:02', 'dd-mm-yyyy hh24:mi:ss');
 
 # looking for a table name 
 select tablename from pg_catalog.pg_tables where schemaname='public' and tablename like '%ins%';
