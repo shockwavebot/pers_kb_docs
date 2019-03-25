@@ -47,7 +47,8 @@ CREATE TABLE playground (
     type varchar (50) NOT NULL,
     color varchar (25) NOT NULL,
     location varchar(25) check (location in ('north', 'south', 'west', 'east', 'northeast', 'southeast', 'southwest', 'northwest')),
-    install_date date
+    install_date date,
+    date_time timestamp
 );
 
 # drop/delete a rable 
