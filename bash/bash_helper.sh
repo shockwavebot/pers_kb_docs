@@ -11,11 +11,6 @@ command || return 0
 # check if command is available and exit script with rc and message 
 command || { echo "What is wrong message." && exit 33; }
 
-# get date 5 minutes before or after 
-date --date='5 minutes ago' # 5min ago
-date # how 
-date --date='5 minutes' # in 5min in from now
-
 # list all directores/subdirs 
 ls -d /path/*/
 
@@ -128,12 +123,6 @@ cat /proc/meminfo |grep MemTotal
 
 # check whic TCP port application is using 
 ss -l -p -n|grep <PID>|<user>|<process_name>
-
-# Date format
-date +%Y-%m-%d' '%H:%M:%S
-
-# Calculate date in the future 
-date -d "2017-03-05 +90 days" '+%Y-%m-%d'
 
 # list all the directories in the path variable
 ls -la $(echo $LIBPATH|tr ':' '\n')
