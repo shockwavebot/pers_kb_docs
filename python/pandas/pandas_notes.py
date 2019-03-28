@@ -18,4 +18,15 @@ import pandas as pd
 
 # read from csv file 
 df = pd.read_csv("data_table_example.csv")
+df = pd.read_csv("data_table_example.csv", sep=";")
+df = pd.read_csv("data_table_example.csv", header = None) # if there is no header in the file 
+df.columns = ["ID", "Name", "City"] # to name columns when header is missing
+df.set_index("Index_Column", inplace=True, drop=False) # use table culumn as index instead of interal panda row number 
+
+# slice and extract data from data frame 
+df.loc[from:to, from:to] # labels
+df.iloc[from:to, from:to] # indexes
+
+# delete from data frame
+df.drop()
 
