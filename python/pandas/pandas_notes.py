@@ -15,3 +15,7 @@ import pandas as pd
      Age  Name
 0  735.0  Yoda
 1    NaN  Luke
+
+# read from csv file 
+df = pd.read_csv("data_table_example.csv")
+
