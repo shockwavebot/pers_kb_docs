@@ -1,3 +1,17 @@
+
+
+#############################################
+# creating a directory
+import os 
+new_dir = '/tmp/new_tmp_dir'
+if not os.path.exists(new_dir):
+   # for subdirs use os.makedirs(), 
+   # otherwise, mkdir() creates only one level 
+   os.mkdir(new_dir) 
+os.listdir(new_dir)
+os.getcwd()
+#############################################
+
 # convert string to a dict, example when reading from a file
 my_dict = eval("{'key': 'value'}")
 
