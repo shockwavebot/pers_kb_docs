@@ -10,6 +10,7 @@ if not os.path.exists(new_dir):
    os.mkdir(new_dir) 
 os.listdir(new_dir)
 os.getcwd()
+os.rmdir(dir_path)
 #############################################
 
 # convert string to a dict, example when reading from a file
