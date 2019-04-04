@@ -15,6 +15,13 @@ aws --version
 
 `aws configure`
 
+```
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: eu-central-1
+Default output format [None]: json
+```
+
 ## Operations 
 
 #### List instances 
