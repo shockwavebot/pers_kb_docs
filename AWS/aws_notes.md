@@ -4,7 +4,10 @@
 
 ### Installing the AWS CLI 
 
-`pip install awscli`
+```
+pip install awscli
+aws --version
+```
 
 ### Configuring AWS CLI 
 
