@@ -20,4 +20,6 @@ conn.close()
 t = ('RHAT',)
 c.execute('SELECT * FROM stocks WHERE symbol=?', t) # avoiding sql injections by this syntax 
 c.fetchone()
-c.fetchall()
+c.fetchall() # returns a list of results 
+
+
