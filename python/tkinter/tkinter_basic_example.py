@@ -15,4 +15,16 @@ e1.grid(row=0, column=1)
 t1 = Text(window, height=1, width=15)
 t1.grid(row=0, column=2)
 
+l1 = Label(window, text="Title")
+l1 = grid(row=0, column=0)
+
+list1 = Listbox(window, height=16, width=32)
+list1.grid(row=2, column=0, rowspan=16, columnspan=2)
+
+sb1 = Scrollbar(window)
+sb1.grid(row=2, column=2, rowspan=16)
+
+list1.configure(yscrollcommand=sb1.set)
+sb1.configure(command=list1.yview)
+
 window.mainloop()
