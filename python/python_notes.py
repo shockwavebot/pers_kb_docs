@@ -347,7 +347,6 @@ response = {
     'silence' : 'Fine. Be that way!'
 }
 return response.get(phraseType, 'Whatever.')
-
 #####################################################
 
 #####################################################
