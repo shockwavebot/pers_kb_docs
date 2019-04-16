@@ -19,3 +19,8 @@ Foo = type(
         }
 )
 ```
+
+### Constructor and destructor
+
+Contructor: `__init__`
+Destructor: `__del__` called with `del object`
