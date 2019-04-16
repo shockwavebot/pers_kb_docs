@@ -22,4 +22,5 @@ c.execute('SELECT * FROM stocks WHERE symbol=?', t) # avoiding sql injections by
 c.fetchone()
 c.fetchall() # returns a list of results 
 
-
+# Delete 
+c.execute('DELETE FROM stocks WHERE symbol=?', (t,))
