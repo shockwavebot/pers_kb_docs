@@ -9,3 +9,5 @@ select tablename from pg_catalog.pg_tables where tableowner='r_fxs09' and tablen
 # case insensitive query 
 select cloumn_name from table_name where lower(column_name) like '%filter%'
 
+# display column names in a table 
+select column_name from information_schema.columns where table_name = 'position';
