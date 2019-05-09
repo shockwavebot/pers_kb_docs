@@ -16,3 +16,8 @@ DELETE FROM tt_tab_test WHERE vistor_id <= 4;
 
 # value in range
 SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+
+# display column names in a table 
+select column_name from information_schema.columns where table_name = 'position';
+
+
