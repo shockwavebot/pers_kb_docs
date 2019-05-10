@@ -21,7 +21,9 @@ for key, value in d.items():
 
 # pretty pring of json 
 import json
-print(json.dumps(json_container, indent=2, sort_keys=True))
+ugly_json = '{...}'
+parsed = json.loads(ugly_json)
+print(json.dumps(parsed, indent=2, sort_keys=True))
 
 # saving code in function definitions: setattr() + lambda + list(set)
 calc = lambda p: round(seconds / p, 2)
