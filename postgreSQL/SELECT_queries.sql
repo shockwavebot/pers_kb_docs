@@ -11,3 +11,9 @@ select cloumn_name from table_name where lower(column_name) like '%filter%'
 
 # display column names in a table 
 select column_name from information_schema.columns where table_name = 'position';
+
+# inner join 
+SELECT table1.name, table2.symbol 
+FROM table1 INNER JOIN table2 ON table1.common_key=table2.common_key 
+WHERE table2.status='ACTIVE' and table2.authorized='true' 
+order by table1.name; 
