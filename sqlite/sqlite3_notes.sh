@@ -7,6 +7,9 @@ sqlite3 db_name.db
 # list tables
 .tables 
 
+# list column info 
+.schema table_name
+
 # exit 
 .quit
 
