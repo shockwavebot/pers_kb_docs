@@ -1,8 +1,0 @@
-year = 2017
-month = 2
-mapping = {1:[],2:[],3:[],4:[],5:[],6:[],7:[]}
-from datetime import datetime, timedelta
-d = datetime(year, month,1)
-while d < datetime(year, month+1,1):
-    mapping[d.isoweekday()].append(d.day)
-    d += timedelta(days=1)
