@@ -34,3 +34,10 @@ cd ~/Downloads
 sudo tar Jxf Popcorn-Time-* -C /opt/popcorntime
 sudo ln -sf /opt/popcorntime/Popcorn-Time /usr/bin/popcorntime
 ################################################################################
+# libvirt/kvm/virtualization
+sudo apt-get install libvirt-bin libvirt-doc # libvirt 
+sudo apt-get install virt-manager # virtual manager 
+sudo apt-get install qemu-kvm
+sudo systemctl enable libvirtd; sudo systemctl status libvirtd
+sudo virsh net-list
+sudo virt-manager
