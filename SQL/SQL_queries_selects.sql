@@ -20,6 +20,9 @@ SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
 # display column names in a table 
 select column_name from information_schema.columns where table_name = 'position';
 
+# found out in which table is the specific column
+select column_name,table_name from information_schema.columns where column_name like '%customer%';
+
 # inner join 
 SELECT table1.name, table2.symbol 
 FROM table1 INNER JOIN table2 ON table1.common_key=table2.common_key 
