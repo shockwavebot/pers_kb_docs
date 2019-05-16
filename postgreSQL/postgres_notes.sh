@@ -9,6 +9,7 @@
 psql -h 10.1.1.2 -p 10902 -U username db_name -c "SELECT table_name FROM information_schema.tables WHERE table_schema='public' AND table_catalog='db_name' ORDER BY 1;"
 \d __table__: Show table definition including triggers
 \c __database__: Connect to a database
+\x: expanded display on|off - useful when nicer is to have columns vertically 
 
 # UBUNTU client installation
 sudo apt-get install postgresql-client
