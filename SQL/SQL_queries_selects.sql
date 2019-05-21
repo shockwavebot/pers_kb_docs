@@ -28,3 +28,6 @@ SELECT table1.name, table2.symbol
 FROM table1 INNER JOIN table2 ON table1.common_key=table2.common_key 
 WHERE table2.status='ACTIVE' and table2.authorized='true' 
 order by table1.name; 
+
+# check the column data type 
+SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'temp';
