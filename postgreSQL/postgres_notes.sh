@@ -80,5 +80,9 @@ log_min_messages = debug1
 # get number of rows, count rows, count table entries
 SELECT COUNT(*) FROM TABLE_NAME;
 
+# search for value in all tables 
+pg_dump -h db_IP -p 10999 -U user db_name --data-only --inserts > db.tmp; grep SEARCH_STRING db.tmp
+
+
 
 
