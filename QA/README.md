@@ -1,14 +1,20 @@
-# Type of tests
+# Categories
 
 - Unit tests (written by developer)
 - Smoke testing (general health check up)
 - Regression testing (verification that no new bugs are introduced)
 - Sanity testing (subset of regression testing, narrow, checking if bug is fixed)
 - Functional testing (focus on feature, functionality, black box)
-- Integration testing (integration between different units/parts/modules)
+- Integration testing (integration between different units/parts/modules, relationship and communication between units)
 - System testing (whole system)
 - Acceptance testing (client perspective, before releasing, delivering to the customer)
 - Exploratory testing
+
+- **Level (When?)**: UNIT -> INTEGRATION -> SYSTEM -> ACCEPTANCE
+- **Method (How?)**: BLACK, WHITE, AGILE, AD-HOC(EXPLORATORY)
+- **Type (What?)**: Smoke, Build/Deployment validation, Functional, Security, Usability, Regression, Performance, Complience, Non-Functional(Technical) 
+
+**Const of quality** - if bug found later, it costs 10x more to repair it 
 
 #### Smoke tests
 
