@@ -10,3 +10,9 @@ UPDATE temp SET col1 = 'value', col2='value';
 INSERT INTO SourceTable (col1, col2, col3)
     SELECT col1, col2, col3 FROM temp;
 DELETE temp;
+
+
+# insert if not in the table or not existing / insert - combining select and values 
+insert into table (id, col2, col3)
+        select id, 'value 1', 'value 2' from table2 where col4='A' and col5=2 
+        AND id NOT IN (select id from table3);
