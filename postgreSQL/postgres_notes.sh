@@ -83,6 +83,7 @@ SELECT COUNT(*) FROM TABLE_NAME;
 # search for value in all tables 
 pg_dump -h db_IP -p 10999 -U user db_name --data-only --inserts > db.tmp; grep SEARCH_STRING db.tmp
 
-
+# dump single table 
+pg_dump --host localhost --port 5432 --username postgres --format plain --ignore-version --verbose --file "<abstract_file_path>" --table public.tablename dbname
 
 
