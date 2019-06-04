@@ -1,5 +1,9 @@
 
 
+# mean, median, avarage 
+from statistics import mean
+mean([1,2,3,4,5])
+
 #############################################
 # creating a directory
 import os 
