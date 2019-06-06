@@ -45,5 +45,6 @@ ORDER BY "num" DESC;
 # finding duplicates 
 SELECT id, name, COUNT(*) FROM table_name GROUP BY id, name HAVING COUNT(*) > 1;
 
-
+# duzina polja
+LENGTH(col_name) = 5;
 
