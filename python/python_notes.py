@@ -1,5 +1,12 @@
 
 
+# convert string to fstring 
+eval(f'f"{s}"')
+>>> s="marko je {kdo}"
+>>> kdo='kralj'
+>>> eval(f'f"{s}"')
+'marko je kralj'
+
 # mean, median, avarage 
 from statistics import mean
 mean([1,2,3,4,5])
