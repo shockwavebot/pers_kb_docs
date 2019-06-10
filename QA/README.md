@@ -1,13 +1,13 @@
 # Categories
 
 - Unit tests (written by developer)
-- Smoke testing (general health check up)
+- Smoke testing (general health check up, "help you build the **thing right**")
 - Regression testing (verification that no new bugs are introduced)
 - Sanity testing (subset of regression testing, narrow, checking if bug is fixed)
 - Functional testing (focus on feature, functionality, black box)
 - Integration testing (integration between different units/parts/modules, relationship and communication between units)
 - System testing (whole system)
-- Acceptance testing (client perspective, before releasing, delivering to the customer)
+- Acceptance testing (client perspective, before releasing, delivering to the customer, "help you build the **right thing**")
 - Exploratory testing
 
 - **Level (When?)**: UNIT -> INTEGRATION -> SYSTEM -> ACCEPTANCE
