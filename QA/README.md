@@ -1,5 +1,7 @@
 # Categories
 
+**DEV > INT > SYS > ACC > SIM > PROD**
+
 - Unit tests (written by developer)
 - Smoke testing (general health check up, "help you build the **thing right**")
 - Regression testing (verification that no new bugs are introduced)
