@@ -6,7 +6,7 @@ The Robot Framework is an open source, general purpose test automation framework
 
 ### Example usage 
 
-./tests/TC01.robot:
+./tests/TC01.robot: (*notice 2 spaces, double space, around key word **log***)
 
 ```
 ***Test Cases***
