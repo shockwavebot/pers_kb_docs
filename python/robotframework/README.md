@@ -89,9 +89,21 @@ Print welcome message for  [Arguments]  ${USER}
     Log  Welcome ${USER}!
 ```
 
+## Other 
 
+### FOR loop 
 
+```
+# This code block runs 5 times for x = 10, 12, 14, 16,18
+|  | :FOR | ${x} | IN RANGE | 10  |  20 |  2  |
+|  |    |  Log  |  ${x} |
+```
 
+#### Continue and break ???
+
+`|  |  | Exit For Loop If | ${val} > 10 |`
+
+???
 
 
 
