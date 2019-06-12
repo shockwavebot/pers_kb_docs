@@ -77,7 +77,17 @@ Variables  python_file.py
 
 ### 3) Resource files
 
+```
+*** Settings ***
+Resource  Path/to/another_resource
 
+*** Variable ***
+${USER}  Test user
+
+*** Keyword ***
+Print welcome message for  [Arguments]  ${USER}
+    Log  Welcome ${USER}!
+```
 
 
 
