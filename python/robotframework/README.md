@@ -44,11 +44,11 @@ Report:  /home/mstan/projects/py-playground/robotframe/simpleapp/report.html
 
 ## Test config files 
 
-### Suite initialization files
+### 1) Suite initialization files
 
 `__init__.robot`
 
-### External variable files
+### 2) External variable files
 
 `${Variable Name}` - single-valued variables
 
@@ -75,4 +75,18 @@ Variables  python_file.py
   Log  For ${person['name']}, the grade obtained was ${person['grade']}
 ```
 
-### Resource files
+### 3) Resource files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
