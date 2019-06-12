@@ -4,7 +4,7 @@ The Robot Framework is an open source, general purpose test automation framework
 
 ![high level](./rbtfrm.PNG)
 
-### Example usage 
+## Example usage 
 
 ./tests/TC01.robot: (*notice 2 spaces, double space, around key word **log***)
 
@@ -41,3 +41,38 @@ Output:  /home/mstan/projects/py-playground/robotframe/simpleapp/output.xml
 Log:     /home/mstan/projects/py-playground/robotframe/simpleapp/log.html
 Report:  /home/mstan/projects/py-playground/robotframe/simpleapp/report.html
 ```
+
+## Test config files 
+
+### Suite initialization files
+
+`__init__.robot`
+
+### External variable files
+
+`${Variable Name}` - single-valued variables
+
+`@{Variable Name}` - variable containing a list of different values
+
+```
+*** Variables *** 
+${Weather}  London  Cloudy  25 
+${humidity}  75 
+${MARKS}  65.5 
+@{DAYS}  Monday  Wednesday  Friday  Sunday
+```
+
+#### Python file containing variables 
+
+`person = { 'name' : 'John Doe','age' : '26', 'grade' : 'A', 'gpa' : 8.9 }`
+
+```
+*** Setting ***
+Variables  python_file.py
+...
+*** Test Cases ***
+...
+  Log  For ${person['name']}, the grade obtained was ${person['grade']}
+```
+
+### Resource files
