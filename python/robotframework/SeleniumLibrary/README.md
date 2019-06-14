@@ -1,0 +1,18 @@
+# Selenium Library for Robot Framework 
+
+Requirement: Browsers with it's own webdrivers are installed 
+
+`pip install --upgrade robotframework-seleniumlibrary`
+
+[List of keywords](http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+
+http://robotframework.org/SeleniumLibrary/
+
+https://github.com/robotframework/SeleniumLibrary
+
+### Pros and cons 
+
+- (+) Readability
+- (+) Ease to use, write test cases 
+- (+) Built-in reporting and logging 
+- (-) Less control, grid, multiprocessing, code efficiency, custom SUT optimization 
