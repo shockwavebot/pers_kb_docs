@@ -13,6 +13,6 @@ https://github.com/robotframework/SeleniumLibrary
 ### Pros and cons 
 
 - (+) Readability
-- (+) Ease to use, write test cases 
+- (+) Ease to use, write test cases, managing suites, reuse and parametrizing test cases 
 - (+) Built-in reporting and logging 
 - (-) Less control, grid, multiprocessing, code efficiency, custom SUT optimization 
