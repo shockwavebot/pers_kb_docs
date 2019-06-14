@@ -6,9 +6,11 @@ Requirement: Browsers with it's own webdrivers are installed
 
 [List of keywords](http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
 
-http://robotframework.org/SeleniumLibrary/
+[SeleniumLibrary](http://robotframework.org/SeleniumLibrary/)
 
-https://github.com/robotframework/SeleniumLibrary
+[SeleniumLibrary on GitHub](https://github.com/robotframework/SeleniumLibrary)
+
+[WebDemo](https://github.com/robotframework/WebDemo)
 
 ### Pros and cons 
 
