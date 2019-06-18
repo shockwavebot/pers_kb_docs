@@ -30,12 +30,6 @@ my_dict = eval("{'key': 'value'}")
 # interate dictionary
 for key, value in d.items():
 
-# pretty pring of json 
-import json
-ugly_json = '{...}'
-parsed = json.loads(ugly_json)
-print(json.dumps(parsed, indent=2, sort_keys=True))
-
 # saving code in function definitions: setattr() + lambda + list(set)
 calc = lambda p: round(seconds / p, 2)
 setattr(self, 'on_' + planet, calc)
