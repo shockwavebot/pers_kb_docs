@@ -1,18 +1,20 @@
 def my_decorator(function):
-    def wrapper(*a):
+    def wrapper(*a, **kw):
         print('Function name: \t {}'.format(function.__name__))
         print('Arguments: \t {}'.format(a))
-        print('Funcion result:  {}'.format(function(*a)))
+        function.__globals__['injected_arg'] = 'Injected msg from wrapper...'
+        return function(*a, **kw)
     return wrapper
 
 @my_decorator
 def add(a,b):
+    print(injected_arg)
     return a + b
 
-if __name__ == '__main__':
-    add(2,3)
-
-    
+Result: 
+>>> add(2,3)
 Function name:   add
-Arguments:       (1, 2)
-Funcion result:  3
+Arguments:       (2, 3)
+Injected msg from wrapper...
+5
+>>> 
