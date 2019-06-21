@@ -251,6 +251,8 @@ In [4]: foo(*list)
 # creating generators, yield istead of return
 # list comperhensions
 return [x for x in servers if x.servers.contains(query)]
+# matrix list comperhensions 
+[(a,b) for a in a_arr for b in b_arr]
 
 ======================
 #creating and assigning list is only assigning references, for copy the list use:
