@@ -1,4 +1,5 @@
-
+# expand tuple to arguments of a function
+funct(*tuple)
 
 # convert string to fstring 
 eval(f'f"{s}"')
