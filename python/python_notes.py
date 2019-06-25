@@ -1,3 +1,7 @@
+# get source code 
+import inspect 
+inspect.getsource
+
 # expand tuple to arguments of a function
 funct(*tuple)
 
