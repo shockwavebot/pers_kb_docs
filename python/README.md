@@ -24,3 +24,22 @@ Foo = type(
 
 Contructor: `__init__`
 Destructor: `__del__` called with `del object`
+
+### Getter and setter - @property decorator
+
+```
+class Xmpl:
+    def __init__(self, value):
+        self.__value = value
+
+    @property
+    def value(self):
+        print("Getting value...")
+        return self.__value
+
+    @value.setter
+    def value(self, value):
+        print("Setting value...")
+        self.__value = value
+
+```
