@@ -27,7 +27,7 @@ Destructor: `__del__` called with `del object`
 
 ### Getter and setter - @property decorator
 
-```
+```python
 class Xmpl:
     def __init__(self, value):
         self.__value = value
