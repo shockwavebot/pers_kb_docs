@@ -6,7 +6,8 @@
 - Smoke testing (general health check up, "help you build the **thing right**")
 - Regression testing (verification that no new bugs are introduced)
 - Sanity testing (subset of regression testing, narrow, checking if bug is fixed)
-- Functional testing (focus on feature, functionality, black box)
+- Functional testing (focus on feature, functionality, black box) - Examples: *decision tables, equivalence partitioning, range testing, boundary value testing, database integrity testing, cause–effect graphing, orthogonal array testing, array and table testing, exception testing, limit testing, random testing...*
+- Structural testing (white box) - Examples: *basis path analysis, statement coverage, branch coverage, condition coverage,  branch/condition coverage...*
 - Integration testing (integration between different units/parts/modules, relationship and communication between units)
 - System testing (whole system)
 - Acceptance testing (client perspective, before releasing, delivering to the customer, "help you build the **right thing**")
