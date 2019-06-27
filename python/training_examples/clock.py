@@ -1,3 +1,4 @@
+# v1
 class Clock(object):
     def __init__(self, hour, minute):
         self.hour = divmod(hour + divmod(minute,60)[0], 24)[1]
@@ -20,10 +21,9 @@ class Clock(object):
         return Clock(self.hour - divmod(minutes,60)[0], self.minute - divmod(minutes, 60)[1])
 
 # v2
-
 class Clock:
     def __init__(self, hour, minute):
-        self.time = divmod((hour*60 + minute)%1440, 60)
+        self.time = divmod((hour*60 + minute)%(24*60), 60)
 
     @property
     def now(self):
