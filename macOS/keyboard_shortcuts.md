@@ -23,6 +23,8 @@ TODO: https://www.techrepublic.com/article/20-terminal-shortcuts-developers-need
 
 ## Outlook
 
+TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-for-mac-07ae68c8-b7af-4010-b225-324c04ac7335
+
 | Action | Key combination | Comment | 
 | --- | --- | --- | 
 | Mark as read | command ⌘ + T | |
