@@ -14,9 +14,9 @@
 
 ## Outlook
 
-| Action | Key combination |
-| --- | --- |
-| Mark as read | command ⌘ + T |
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Mark as read | command ⌘ + T | |
 
 
 
