@@ -7,7 +7,7 @@
 | Right mouse click | control ^ + touch pad click | |
 | Delete file | command ⌘ + backspace ⌫ | |
 | Home, start of the line | command ⌘ + left arrow ← | |
-| Word delete | option ⌥ + backspace ⌫ | Go to `Terminal > Preferences > Profiles > Keyboard` and `Use option key as meta key` |
+| Word delete left from cursor | option ⌥ + backspace ⌫  or control ^ + W | Go to `Terminal > Preferences > Profiles > Keyboard` and `Use option key as meta key` |
 
 
 
