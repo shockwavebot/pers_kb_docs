@@ -1,12 +1,13 @@
 ## General 
 
 
-| Action | Key combination |
-| --- | --- |
-| Close tab in browser | command ⌘ + W |
-| Right mouse click | control ^ + touch pad click | 
-| Delete file | command ⌘ + backspace ⌫ | 
-| Home, start of the line | command ⌘ + left arrow ← |
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Close tab in browser | command ⌘ + W | |
+| Right mouse click | control ^ + touch pad click | |
+| Delete file | command ⌘ + backspace ⌫ | |
+| Home, start of the line | command ⌘ + left arrow ← | |
+| Word delete | option ⌥ + backspace ⌫ | Go to `Terminal > Preferences > Profiles > Keyboard` and `Use option key as meta key` |
 
 
 
