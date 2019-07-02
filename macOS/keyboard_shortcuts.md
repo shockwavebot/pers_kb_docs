@@ -5,6 +5,7 @@
 | --- | --- |
 | Close tab in browser | command ⌘ + W |
 | Right mouse click | control ^ + touch pad click | 
+| Delete file | command ⌘ + backspace ⌫ | 
 
 
 
