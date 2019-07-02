@@ -13,6 +13,8 @@
 
 #### VSCode
 
+`https://code.visualstudio.com/Download`
+
 #### PyCharm 
 
 #### Terminal
