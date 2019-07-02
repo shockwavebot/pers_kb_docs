@@ -2,8 +2,8 @@
 zypper in -y git-core
 
 # setting up local user account and git:
-git config --global user.name "stanojlovic.marko@gmail.com"
-git config --global user.email "stanojlovic.marko@gmail.com"
+git config --global user.name stanojlovic.marko@gmail.com
+git config --global user.email stanojlovic.marko@gmail.com
 git config --global credential.helper cache
 git config --global credential.helper store
 git config --global color.ui auto
