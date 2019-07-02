@@ -1,5 +1,6 @@
 ## General 
 
+TODO: 
 
 | Action | Key combination | Comment | 
 | --- | --- | --- | 
@@ -9,7 +10,15 @@
 | Home, start of the line | command ⌘ + left arrow ← | |
 | Word delete left from cursor | option ⌥ + backspace ⌫  or control ^ + W | Go to `Terminal > Preferences > Profiles > Keyboard` and `Use option key as meta key` |
 
+### Terminal 
 
+
+TODO: https://www.techrepublic.com/article/20-terminal-shortcuts-developers-need-to-know/
+
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Home/Start of the line | control ^ + A | |
+| End/End of the line | control ^ + E | | 
 
 
 ## Outlook
