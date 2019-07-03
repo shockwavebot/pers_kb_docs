@@ -23,4 +23,4 @@
 
 #### Docker 
 
-Download the install file from https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac 
+`https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac`
