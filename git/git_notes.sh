@@ -96,7 +96,7 @@ git checkout testing
 # to list all branches
 git branch -a
 
-# delete a branch
+# delete a branch (can't be checked in into the branch that you delete)
 git branch -d the_local_branch 			# local
 git push origin :the_remote_branch 		# remote
 
