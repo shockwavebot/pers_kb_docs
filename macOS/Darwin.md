@@ -5,6 +5,8 @@
 
 `brew config # to verify`
 
+What is installed? `grep 'Installed' /private/var/log/install.log`
+
 ### Tools 
 
 #### git 
