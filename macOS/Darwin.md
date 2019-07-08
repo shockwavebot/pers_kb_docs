@@ -27,9 +27,9 @@ What is installed? `grep 'Installed' /private/var/log/install.log`
 
 `https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac`
 
-#### iTerm2
+#### iTerm2 
 
  Preferences `⌘,` > Profiles > Keys > Load Preset > Natural Text Editing
  
- 
+[Keyboard Shortcuts](https://gist.github.com/squarism/ae3613daf5c01a98ba3a)
  
