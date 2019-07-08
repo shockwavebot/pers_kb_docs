@@ -26,3 +26,10 @@ What is installed? `grep 'Installed' /private/var/log/install.log`
 #### Docker 
 
 `https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac`
+
+#### iTerm2
+
+ Preferences `⌘,` > Profiles > Keys > Load Preset > Natural Text Editing
+ 
+ 
+ 
