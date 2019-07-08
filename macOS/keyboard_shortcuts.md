@@ -12,6 +12,12 @@ TODO:
 | Lock screen | command ⌘ + control ^ + Q | | 
 | Exit/Terminate app | command ⌘ + Q | | 
 
+### Window
+
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Maximize/Zoom window | ⌥⌘= | Manually configure it | 
+
 ### Terminal 
 
 
