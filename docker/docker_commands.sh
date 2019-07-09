@@ -19,3 +19,8 @@ docker pull img_name
 sudo docker image rm _name_
 # get image details 
 sudo docker image inspect img_name
+
+# check version 
+docker inspect cont_name | grep -i version 
+
+
