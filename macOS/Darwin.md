@@ -33,3 +33,7 @@ What is installed? `grep 'Installed' /private/var/log/install.log`
  
 [Keyboard Shortcuts](https://gist.github.com/squarism/ae3613daf5c01a98ba3a)
  
+### Additional tools 
+
+Calendar: Itsycal
+
