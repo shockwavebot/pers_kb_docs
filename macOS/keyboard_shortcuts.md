@@ -18,6 +18,12 @@ TODO:
 | --- | --- | --- | 
 | Maximize/Zoom window | ⌥⌘= | Manually configure it | 
 
+### Browser 
+
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Home/Start/Beggining of the page | ⌘↑ | 
+
 ### Terminal 
 
 
