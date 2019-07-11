@@ -1,16 +1,27 @@
 ## General 
 
-TODO: 
+Legened: 
+
+| Name | Symbol | 
+| --- | --- |
+| command | ⌘ |
+| control | ^ |
+| option | ⌥ |
+| shift | ⇧ |
+| backspace | ⌫ |
+| left arrow | ← | 
+
 
 | Action | Key combination | Comment | 
 | --- | --- | --- | 
-| Close tab in browser | command ⌘ + W | |
-| Right mouse click | control ^ + touch pad click | |
-| Delete file | command ⌘ + backspace ⌫ | |
-| Home, start of the line | command ⌘ + left arrow ← | |
-| Word delete left from cursor | option ⌥ + backspace ⌫  or control ^ + W | Go to `Terminal > Preferences > Profiles > Keyboard` and `Use option key as meta key` |
-| Lock screen | command ⌘ + control ^ + Q | | 
-| Exit/Terminate app | command ⌘ + Q | | 
+| Close tab in browser |  ⌘W | |
+| Right mouse click |  ^ + touch pad click | |
+| Delete file | ⌘⌫ | |
+| Home, start of the line | ⌘← | |
+| Word delete left from cursor | ⌥⌫  or ^W | Go to `Terminal > Preferences > Profiles > Keyboard` and `Use option key as meta key` |
+| Lock screen | ⌘^Q | | 
+| Exit/Terminate app | ⌘Q | | 
+| Show Launchpad | ⇧⌘↑ | Need to be manually configured | 
 
 ### Window
 
