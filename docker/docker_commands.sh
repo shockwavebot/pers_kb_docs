@@ -23,4 +23,6 @@ sudo docker image inspect img_name
 # check version 
 docker inspect cont_name | grep -i version 
 
+# enter in shell 
+docker exec -it cont_name /bin/bash
 
