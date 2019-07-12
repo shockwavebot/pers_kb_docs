@@ -14,3 +14,12 @@ def some_data():
 def test_some_data(some_data):
     assert some_data == 1234
 ```
+
+## Errors/problems 
+
+#### warning : could not load initial conftests (/usr/share/storyteller/tests/conftest.py)
+
+Deleted all python compiled files: 
+
+`find . -name \*.pyc -delete`
+
