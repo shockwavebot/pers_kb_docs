@@ -17,3 +17,10 @@ sudo sed -i '/^\%sudo/c\\%sudo ALL=\(ALL\:ALL\) NOPASSWD\: ALL' /etc/sudoers
 sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt update
 sudo apt install -y woeusb
+
+# right mouse click on touchpad
+sudo apt-get install gnome-tweaks 
+
+
+
+
