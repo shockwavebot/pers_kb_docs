@@ -27,7 +27,7 @@ Legened:
 
 | Action | Key combination | Comment | 
 | --- | --- | --- | 
-| Maximize/Zoom window | ⌥⌘= | Manually configure it | 
+| Maximize/Zoom window | ⌥⌘= | Manually configure: `... > App Shortcuts > + > Menu Title: Zoom` | 
 
 ### Browser 
 
