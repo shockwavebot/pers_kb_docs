@@ -1,3 +1,5 @@
+# assign value if var/parameter not set 
+myvar1=${myvar2:-myvalue} # assigns value of myvar2 if exists, if not, assigns value "myvalue" to var myvar1
 
 # decimal to binary converter by using braces to build sequence
 dec2bin=({0..1}{0..1}{0..1}) # () are making the array 
