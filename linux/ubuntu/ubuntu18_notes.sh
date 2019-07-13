@@ -18,7 +18,7 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt update
 sudo apt install -y woeusb
 
-# right mouse click on touchpad
+# right mouse click on touchpad: two-finger-click 
 sudo apt-get install gnome-tweaks 
 
 
