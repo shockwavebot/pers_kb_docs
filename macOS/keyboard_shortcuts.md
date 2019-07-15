@@ -22,6 +22,7 @@ Legened:
 | Lock screen | ⌘^Q | | 
 | Exit/Terminate app | ⌘Q | | 
 | Show Launchpad | ⇧⌘↑ | Need to be manually configured | 
+| Print Screen | ⇧⌘4 | |
 
 ### Window
 
