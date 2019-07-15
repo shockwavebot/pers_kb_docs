@@ -42,6 +42,10 @@ Log:     /home/mstan/projects/py-playground/robotframe/simpleapp/log.html
 Report:  /home/mstan/projects/py-playground/robotframe/simpleapp/report.html
 ```
 
+#### Run only one test from file 
+
+`-t "Test name" /path/to/suite/file.robot`
+
 ## Test config files 
 
 ### 1) Suite initialization files
