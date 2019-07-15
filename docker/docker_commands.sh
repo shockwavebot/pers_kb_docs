@@ -26,3 +26,6 @@ docker inspect cont_name | grep -i version
 # enter in shell 
 docker exec -it cont_name /bin/bash
 
+# execute a command 
+docker exec -t 506f1b386ca1 bash -c "ls -l /home"
+
