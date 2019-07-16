@@ -6,8 +6,8 @@ The Robot Framework is an open source, general purpose test automation framework
 
 ### Aproaches 
 
-- Keyword driven : keyworads are defined in python library 
-- Data driven : when repeating same workflow multiple times 
+- **Keyword driven** : keyworads are defined in python library 
+- **Data driven** : when repeating same workflow multiple times 
 - Gherkin : more descriptive and clear for non technical testers 
 
 ## Example usage 
