@@ -56,7 +56,11 @@ TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-fo
 | Mark as read | command ⌘ + T | |
 
 
+## Pycharm 
 
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Multiline select with cursor | double option key + cursor | |
 
 
 ---
