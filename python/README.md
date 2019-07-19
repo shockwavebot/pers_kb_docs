@@ -1,5 +1,15 @@
 # Python notes
 
+#### configure python shell double-tab autocomplete
+
+```
+cat <<EOF > ~/.pythonrc
+import rlcompleter, readline
+readline.parse_and_bind('tab:complete')
+EOF
+echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.bash_profile
+```
+
 ### Meta classes
 
 - Class of a class
