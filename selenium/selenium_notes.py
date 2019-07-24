@@ -1,4 +1,6 @@
-# Selenium notes, tips, cheatsheet
+# chrome  
+from selenium import webdriver
+driver = webdriver.Chrome()
 
 # JS code to wait until page load is complete
 drv.execute_script("return document.readyState") # returns 'complete'
