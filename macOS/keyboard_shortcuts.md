@@ -62,6 +62,12 @@ TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-fo
 | --- | --- | --- | 
 | Multiline select with cursor | double option key + cursor | |
 
+## iterm2 
+
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Page Up/Down | ⇧ + fn + ↑/↓ | |
+
 
 ---
 
