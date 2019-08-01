@@ -1,4 +1,5 @@
-import paramiko, os
+import paramiko
+import os
 
 HOSTNAME = 'myhost.com'
 SSH_PRIV_KEY_PATH = os.path.expanduser('~/.ssh/id_rsa')
