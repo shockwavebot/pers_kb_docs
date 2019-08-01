@@ -10,6 +10,11 @@ git config --global color.ui auto
 git config --list
 echo "alias gs='git status'" >> ~/.bashrc
 
+# working with releases/tags 
+git tag -l  # 2019.123.123
+git checkout tags/2019.123.123
+
+
 # error: SSL certificate problem: unable to get local issuer certificate
 git config --system http.sslCAPath /absolute/path/to/git/certificates
 git config --global http.sslVerify false # WORKING
