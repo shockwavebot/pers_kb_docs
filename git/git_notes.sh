@@ -251,3 +251,10 @@ git branch --set-upstream-to=upstream/foo foo # if foo is not current branch
 
 # git clone only one branches
 git clone -b wip-qa-repl_to_ec_2 --single-branch https://github.com/markostanojlovic/ceph.git
+
+
+# save current work for later, revert to some commit from the past and apply new work
+git stash
+git reset --hard 30fa8247b3914a6920bc4dbe7383de5de7527d20
+git stash pop
+
