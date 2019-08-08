@@ -19,3 +19,5 @@ echo 'this is a sample sentence'|awk '{for (i=1;i<=NF;i++) print $i}'
 awk '!seen[$0]++' /etc/hosts > /tmp/hosts
 # remove first and second column
 awk '{$1="";$2=""}1'
+awk '/\[workday\]/ { getline; getline; print $0; getline; getline; print $0; }' $PAF_CONFIG
+
