@@ -51,3 +51,8 @@ sed '/GRUB_TIMEOUT/c\GRUB_TIMEOUT=2' /etc/default/grub
 
  # append line after a\
 
+# nalazi rec "myconfig" i 2 linije kasnije menja hostname liniju 
+sed -i .bck.host "/\[myconfig/ { N; N; s/hostname.*/hostname = ${MY_HOST}/; }"  $MY_CONFIG
+
+
+
