@@ -14,3 +14,6 @@ ${string//substring/replacement} # replace all
 90
 [me@myhost ~]$ echo ${myvar: 3:5} # cut 5 chars from index position 3, index starts from 0 
 45678
+
+# if variable not set, assign default 
+MYVAR=${OTHERVAR:-default_value}
