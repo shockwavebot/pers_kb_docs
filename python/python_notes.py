@@ -1,3 +1,8 @@
+# read and write csv file 
+import csv 
+csv_reader = csv.reader(open(FILENAME, mode='w'), delimiter=',')
+csv_writer = csv.writer(open(FILENAME, mode='w'), delimiter=',')
+
 # get source code 
 import inspect 
 inspect.getsource
