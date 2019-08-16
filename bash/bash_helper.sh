@@ -1,3 +1,6 @@
+# copy files found with find 
+find . -name "some_file_name[0-9].csv" -exec cp {} ~/destination/path/ \;
+
 # assign value if var/parameter not set 
 myvar1=${myvar2:-myvalue} # assigns value of myvar2 if exists, if not, assigns value "myvalue" to var myvar1
 
