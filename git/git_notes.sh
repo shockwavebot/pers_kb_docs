@@ -258,3 +258,6 @@ git stash
 git reset --hard 30fa8247b3914a6920bc4dbe7383de5de7527d20
 git stash pop
 
+# cleaning mess
+git gc --prune=now
+git update-ref -d refs/heads/origin/branch
