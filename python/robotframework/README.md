@@ -115,6 +115,10 @@ Print welcome message for  [Arguments]  ${USER}
 
 ???
 
+#### Pass test execution 
+
+`Pass Execution  "Nothing displayed: No SDET data"`
+
 
 
 
