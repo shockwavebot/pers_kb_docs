@@ -2,6 +2,11 @@
 # get list of files in a dir sorted by date modified 
 import os 
 sorted(os.listdir('.'), key=os.path.getmtime, reverse=False)
+# or
+import glob
+import os
+files = glob.glob("*.txt")
+files.sort(key=os.path.getmtime)
 
 # read and write csv file 
 import csv 
