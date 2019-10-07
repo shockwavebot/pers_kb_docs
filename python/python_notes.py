@@ -1,3 +1,8 @@
+
+# get list of files in a dir sorted by date modified 
+import os 
+sorted(os.listdir('.'), key=os.path.getmtime, reverse=False)
+
 # read and write csv file 
 import csv 
 csv_reader = csv.reader(open(FILENAME, mode='w'), delimiter=',')
