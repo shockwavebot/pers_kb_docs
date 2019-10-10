@@ -5,6 +5,7 @@ ${string%substring}  # Deletes shortest match of $substring from back of $string
 ${string%%substring} # Deletes longest match of $substring from back of $string
 ${string/substring/replacement}  # replace
 ${string//substring/replacement} # replace all
+${string//substring/}            # replace string with empty string = deleting/removing a substring 
 
 # Cut parts of the variable/string 
 [me@myhost ~]$ myvar=1234567890
