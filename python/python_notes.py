@@ -1,4 +1,8 @@
 
+# find path to imported module 
+import a_module
+print(a_module.__file__)
+
 # get list of files in a dir sorted by date modified 
 import os 
 sorted(os.listdir('.'), key=os.path.getmtime, reverse=False)
