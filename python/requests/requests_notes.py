@@ -1,3 +1,6 @@
+# repo: https://github.com/psf/requests
+# docs: https://requests.readthedocs.io/en/latest/
+
 import requests
 
 # to get response in seconds 
