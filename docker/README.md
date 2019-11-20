@@ -18,3 +18,7 @@
 
 `sudo docker run -e WORDPRESS_DB_PASSWORD=mdbpass123 --name wordpress --link wordpressdb:mysql -p 127.0.0.1:80:80 -v "$PWD/html":/var/www/html -d wordpress`
 
+To start with custom env variable: `--env MY_VAR=somevalue`
+
+
+
