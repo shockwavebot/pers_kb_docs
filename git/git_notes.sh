@@ -1,3 +1,7 @@
+
+# list only changed files in a commit 
+git show --pretty="" --name-only c3b2d788
+
 # installing git pkg
 zypper in -y git-core
 
