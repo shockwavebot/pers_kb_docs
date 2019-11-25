@@ -109,6 +109,12 @@ Print welcome message for  [Arguments]  ${USER}
 |  |    |  Log  |  ${x} |
 ```
 
+```
+# Another for loop example
+:FOR  ${elem}  IN    @{list}
+\    Some Keyword  ${elem} 
+```
+
 #### Continue and break ???
 
 `|  |  | Exit For Loop If | ${val} > 10 |`
