@@ -74,6 +74,7 @@ git log -S change_string # only shows commits which have change_string as a chan
 git reset HEAD~
 
 # correct undo last commit, rename commit, edit commit 
+# rename a commit
 git commit --amend
 # to unstage a file
 git reset HEAD file_name
