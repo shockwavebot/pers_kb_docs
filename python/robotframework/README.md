@@ -126,7 +126,9 @@ Print welcome message for  [Arguments]  ${USER}
 `Pass Execution  "Nothing displayed: No SDET data"`
 
 
+#### BUILTIN VARIABLES
 
+http://robotframework.org/robotframework/3.0/RobotFrameworkUserGuide.html#automatic-variables
 
 
 
