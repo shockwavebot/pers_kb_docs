@@ -1,4 +1,7 @@
 
+# list all commits that change one file 
+git log --follow -- file/path/file.name
+
 # list only changed files in a commit 
 git show --pretty="" --name-only c3b2d788
 
