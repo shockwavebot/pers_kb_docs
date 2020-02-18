@@ -61,6 +61,8 @@ TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-fo
 | Action | Key combination | Comment | 
 | --- | --- | --- | 
 | Multiline select with cursor | double option key + cursor | |
+| Go to definition | ⌘ + B | |
+
 
 ## iterm2 
 
