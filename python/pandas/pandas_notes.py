@@ -33,3 +33,9 @@ df.drop()
 # check column/header values 
 df.columns.values
 
+# add column with default value 
+df["new_column_name"] = "default_value"
+
+# save data frame to csv file 
+df.to_csv("new_csv_file")
+
