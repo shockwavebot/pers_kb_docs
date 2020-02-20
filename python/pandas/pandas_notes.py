@@ -30,3 +30,6 @@ df.iloc[from:to, from:to] # indexes
 # delete from data frame
 df.drop()
 
+# check column/header values 
+df.columns.values
+
