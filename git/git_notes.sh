@@ -206,6 +206,10 @@ git diff myfile.txt
 git fetch upstream
 git checkout master
 git reset --hard upstream/master
+# sync/reset my local branch with remote - force pull remote 
+git checkout <branch_name>
+git fetch --all 
+git reset --hard origin/<branch_name>
 
 #########################################
 # fetch the remote upstream
