@@ -6,6 +6,20 @@ parse_git_branch() {
 }
 export PS1="\A \u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+# with additional variable 
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' # does not work for proton > solved
+}
+get_suv_description() {
+    if [[ -n $SUV_DESC ]];then
+        echo $SUV_DESC
+    else
+        echo -
+    fi
+ }
+ # last var has light blue color 
+ export PS1="\A \u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00;94m\] \$(get_suv_description)\[\033[00m\] $ "
+ 
 \a Alarm (Bell)
 \d Date in fomat "Wed Jun 21"
 \h Hostname
