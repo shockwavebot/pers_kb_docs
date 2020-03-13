@@ -71,6 +71,11 @@ TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-fo
 | --- | --- | --- | 
 | Page Up/Down | ⇧ + fn + ↑/↓ | |
 
+## Visual Studio Code VSCode  
+
+| Action | Key combination | Comment | 
+| --- | --- | --- | 
+| Duplicate line | ⌥ opt + ⇧ shift + ↓ down | Same works for up |
 
 ---
 
