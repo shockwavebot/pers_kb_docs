@@ -18,8 +18,9 @@ csv_reader = csv.reader(open(FILENAME, mode='w'), delimiter=',')
 csv_writer = csv.writer(open(FILENAME, mode='w'), delimiter=',')
 
 # get source code 
+from mylib import Myclass
 import inspect 
-inspect.getsource
+inspect.getsource(Myclass)
 
 # expand tuple to arguments of a function
 funct(*tuple)
