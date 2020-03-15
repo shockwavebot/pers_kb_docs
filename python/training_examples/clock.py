@@ -1,5 +1,6 @@
 class Clock:
     def __init__(self, hour, minute):
+        # divmod -> Return the tuple (x//y, x%y)
         self.time = divmod((hour*60 + minute)%(24*60), 60)
 
     @property
