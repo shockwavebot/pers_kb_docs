@@ -58,3 +58,17 @@ sed -i .bck.host "/\[myconfig/ { N; N; s/hostname.*/hostname = ${MY_HOST}/; }"  
 # SOLUTION: you need to specify backup file extension 
 sed -i 'bck' 's:line with spaces:replaced line with spaces:g' test.txt
 
+###############################
+# recursive find and replace
+# only targeted files | "_bck" is mandarory on macOS
+egrep -lr "\- some line with escaped dash" path/to/search/at/* \
+    | xargs sed -i '_bck' 's:- some line with escaped dash:- replacement string:g'
+find path/to/search/at -name "*_bck" -delete # removing backup files
+
+# all files
+find path/to/search/at -type f -exec \
+    sed -i '_bck' 's:- some line with escaped dash:- replacement string:g' {} +
+find path/to/search/at -name "*_bck" -delete
+###############################
+
+
