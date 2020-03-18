@@ -54,5 +54,7 @@ sed '/GRUB_TIMEOUT/c\GRUB_TIMEOUT=2' /etc/default/grub
 # nalazi rec "myconfig" i 2 linije kasnije menja hostname liniju 
 sed -i .bck.host "/\[myconfig/ { N; N; s/hostname.*/hostname = ${MY_HOST}/; }"  $MY_CONFIG
 
-
+# MAC BOOK issue: sed: 1: "test.txt": undefined label 'est.txt'
+# SOLUTION: you need to specify backup file extension 
+sed -i 'bck' 's:line with spaces:replaced line with spaces:g' test.txt
 
