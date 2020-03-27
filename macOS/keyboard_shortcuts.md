@@ -63,6 +63,7 @@ TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-fo
 | Multiline select with cursor | double option key + cursor | |
 | Go to definition | ⌘ + B | |
 | Search Everywhere | double ⇧ | | 
+| Go back/forward in code | ⌘+ ⌥ + Left/Right||
 
 
 ## iterm2 
