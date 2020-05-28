@@ -39,3 +39,6 @@ df["new_column_name"] = "default_value"
 # save data frame to csv file 
 df.to_csv("new_csv_file")
 
+# change value for entire column 
+df['column_name'] = 'new_value'
+
