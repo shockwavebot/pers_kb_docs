@@ -37,8 +37,11 @@ df.columns.values
 df["new_column_name"] = "default_value"
 
 # save data frame to csv file 
-df.to_csv("new_csv_file")
+df.to_csv("new_csv_file", index=False)
 
 # change value for entire column 
 df['column_name'] = 'new_value'
+
+# merge dataframes 
+result = df1.append(df4, sort=False)
 
