@@ -45,3 +45,5 @@ df['column_name'] = 'new_value'
 # merge dataframes 
 result = df1.append(df4, sort=False)
 
+# filtering on column value 
+df_filtered = df[ df['column_name'] == "value" ]
