@@ -131,6 +131,11 @@ Print welcome message for  [Arguments]  ${USER}
 http://robotframework.org/robotframework/3.0/RobotFrameworkUserGuide.html#automatic-variables
 
 
+#### Use current date 
 
+```
+${now}    Evaluate    '{dt.year}-{dt.month:02}-{dt.day:02}'.
+                      format(dt=datetime.datetime.now()+datetime.timedelta(days=1))    modules=datetime
+```
 
 
