@@ -309,6 +309,7 @@ connection.quit()
 # date time
 from datetime import date, timedelta
 yesterday = date.today() - timedelta(1)
+yesterday.isoformat() # '2020-06-05'
 yesterday.strftime('%Y-%m-%d')
 # Date manipulation
 from datetime import datetime
