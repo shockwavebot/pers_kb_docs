@@ -138,4 +138,8 @@ ${now}    Evaluate    '{dt.year}-{dt.month:02}-{dt.day:02}'.
                       format(dt=datetime.datetime.now()+datetime.timedelta(days=1))    modules=datetime
 ```
 
-
+#### Create a list and compare int values 
+```
+@{allowed_range}=    Create List     ${1}    ${2}    ${3}    ${4}    ${5}    ${6}    ${7}
+Should Contain    ${allowed_range}    ${var_under_check}    Message in case value not in range
+````
