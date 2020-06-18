@@ -143,3 +143,11 @@ ${now}    Evaluate    '{dt.year}-{dt.month:02}-{dt.day:02}'.
 @{allowed_range}=    Create List     ${1}    ${2}    ${3}    ${4}    ${5}    ${6}    ${7}
 Should Contain    ${allowed_range}    ${var_under_check}    Message in case value not in range
 ````
+
+#### Multiple keywords in if case 
+```robot
+| | Run Keyword if | '${title}' == 'Some Title'
+| | ... | Run Keywords
+| | ... | Click Element | xpath=some element
+| | ... | AND | Element Text Should Be  |  xpath=some element | some text
+```
