@@ -71,4 +71,10 @@ find path/to/search/at -type f -exec \
 find path/to/search/at -name "*_bck" -delete
 ###############################
 
+# example of special chars 
+# \ is with 4 backslashes = \\\\
+# " is with \" 
+# \"aggregation\": \"1m\",
+sed -i "s/\\\\\"aggregation\\\\\": \\\\\"1m\\\\\", //g"
+
 
