@@ -1,4 +1,7 @@
 
+# find changed files in last number of days 
+git log --since="7 day ago" --name-only --pretty=format: |grep "path"|sort|uniq
+
 # list all commits that change one file 
 git log --follow -- file/path/file.name
 
