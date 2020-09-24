@@ -77,6 +77,9 @@ TODO: https://support.office.com/en-us/article/keyboard-shortcuts-for-outlook-fo
 | Action | Key combination | Comment | 
 | --- | --- | --- | 
 | Duplicate line | ⌥ opt + ⇧ shift + ↓ down | Same works for up |
+| Open Command Palette ⇧⌘P | ⌘ cmd + ⇧ shift + P | - |
+
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 
 ---
 
