@@ -1,4 +1,11 @@
 
+# show file at certain commit 
+git show ${COMMIT_HASH}:path/to/file
+
+# find/search for commit with message 
+git log --grep="search_string"
+git log --grep="search_string" --pretty=format:"%H" # display only full commit hash 
+
 # find changed files in last number of days 
 git log --since="7 day ago" --name-only --pretty=format: |grep "path"|sort|uniq
 
