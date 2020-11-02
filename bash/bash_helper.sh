@@ -1,3 +1,8 @@
+
+# looping trough separated list in bash
+mylist="elem1,elem2,elem2"
+for el in ${mylist//,/ };do echo $el; done
+
 # copy files found with find 
 find . -name "some_file_name[0-9].csv" -exec cp {} ~/destination/path/ \;
 
