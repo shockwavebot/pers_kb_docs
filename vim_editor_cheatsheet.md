@@ -5,10 +5,10 @@
 | Action | Shortcut | Comment |
 |---|---|---|
 | Go to Start of the file | `gg` or `1G` ||
-| Move back one full screen | [Control][b] ||
-| Move forward one full screen | [Control][f] ||
-| Move forward 1/2 screen | [Control][d] ||
-| Move back (up) 1/2 screen | [Control][u] ||
+| Move back one full screen | ctrl ^ + `b` ||
+| Move forward one full screen | ctrl ^ +`f` ||
+| Move forward 1/2 screen | ctrl ^ + `d` ||
+| Move back (up) 1/2 screen | crtl ^ + `u` ||
 
 ## Config options .vimrc 
 
