@@ -30,10 +30,11 @@ sudo apt-get install -y openssh-server
 ################################################################################
 # popcorntime
 sudo apt update && sudo apt install libcanberra-gtk-module libgconf-2-4
-# get pkg: https://get.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz
+# get pkg: download popcorn pkg from website tar or zip file 
 sudo mkdir /opt/popcorntime
 cd ~/Downloads
-sudo tar Jxf Popcorn-Time-* -C /opt/popcorntime
+# sudo tar Jxf Popcorn-Time-* -C /opt/popcorntime # if tar 
+# sudo unzip Popcorn-Time-0.4.4-linux64.zip -d /opt/popcorntime/ # if zip 
 sudo ln -sf /opt/popcorntime/Popcorn-Time /usr/bin/popcorntime
 ################################################################################
 # libvirt/kvm/virtualization
