@@ -11,3 +11,8 @@ http://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents
 ```
 basename /some/path/file.name
 ```
+
+#### To make aliases work in script 
+```
+shopt -s expand_aliases
+```
