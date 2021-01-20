@@ -1,4 +1,7 @@
 
+# get commit hash 
+git rev-parse HEAD 
+
 # show file at certain commit 
 git show ${COMMIT_HASH}:path/to/file
 
