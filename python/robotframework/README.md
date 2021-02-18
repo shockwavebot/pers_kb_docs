@@ -151,3 +151,8 @@ Should Contain    ${allowed_range}    ${var_under_check}    Message in case valu
 | | ... | Click Element | xpath=some element
 | | ... | AND | Element Text Should Be  |  xpath=some element | some text
 ```
+
+#### Controling browser cache
+```
+Execute JavaScript  localStorage.setItem('peopleAnalyticsTourDismiss', 'false')
+```
