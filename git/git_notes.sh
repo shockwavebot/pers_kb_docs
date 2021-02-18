@@ -33,6 +33,10 @@ echo "alias gs='git status'" >> ~/.bashrc
 # working with releases/tags 
 git tag -l  # 2019.123.123
 git checkout tags/2019.123.123
+# delete remote tag 
+git push --delete origin tagname
+# delete local tag 
+git tag -d tagname
 
 
 # error: SSL certificate problem: unable to get local issuer certificate
