@@ -156,3 +156,8 @@ Should Contain    ${allowed_range}    ${var_under_check}    Message in case valu
 ```
 Execute JavaScript  localStorage.setItem('peopleAnalyticsTourDismiss', 'false')
 ```
+
+#### Other useful keywords
+```
+Press Keys    None    ESC
+```
