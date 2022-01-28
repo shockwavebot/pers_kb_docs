@@ -1,3 +1,7 @@
+# dodaje liniju (append) *macos gsed
+sed '/seach_pattern/a line_to_append' file
+# multiple patterns
+sed -e 'pattern1' -e 'pattern2' file
 # menja sve dvotacke u razmake, s - substitute, g - global
 sed -e 's/:/ /g'
 # menja sve dvotacke u razmake, i taylor sa rema_kralj
