@@ -1,3 +1,5 @@
+# compare 2 files line by line 
+if [ "$(wc -l < $f1)" -eq "$(wc -l < $f2)" ]; then echo 'Match!'; else echo 'Warning: No Match!'; fi
 
 # looping trough separated list in bash
 mylist="elem1,elem2,elem2"
