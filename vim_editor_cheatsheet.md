@@ -10,6 +10,7 @@
 | Move forward 1/2 screen | ctrl ^ + `d` ||
 | Move back (up) 1/2 screen | crtl ^ + `u` ||
 | Find and Replace | `:%s/find/replace/g` | % defines range from first to the last line of file |
+| Delete range of lines | `:[first line num],[last line num]d`||
 
 ## Config options .vimrc 
 
