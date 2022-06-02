@@ -12,3 +12,8 @@ KeyRelease event, serial 37, synthetic NO, window 0x4400001,
 # To replace BackSpace key with Delete key 
 xmodmap -e "keycode 22 = Delete"
 
+# To make changes permanent
+xmodmap -pke >~/.Xmodmap
+
+# show all keys mapping
+sudo dumpkeys
