@@ -33,4 +33,12 @@ std::mem::size_of_val(&x);
 
 // ## Vectors = growable array ##
 let mut vec: Vec<T> = Vec::new();   // vector of type T, you can't mix different types, and has to be defined, only sometimes infered 
+
+
+// ### Converting between types ####
+// std::convert 
+// Traits: From/Into TryFrom/TryInto - when conversion can fail 
+
+// ### End of Converting between types ####
+
 vec.push(elem);     // to add element to the vector 
