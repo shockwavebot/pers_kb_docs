@@ -42,3 +42,12 @@ let mut vec: Vec<T> = Vec::new();   // vector of type T, you can't mix different
 // ### End of Converting between types ####
 
 vec.push(elem);     // to add element to the vector 
+
+// ### Matching ###
+// Matching on int range 
+match some_u16_var {
+  0..=21 => Some(1),
+  22..=24 => Some(2),
+  _ => None
+}
+// ### End Matching ###
