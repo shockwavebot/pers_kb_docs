@@ -290,3 +290,17 @@ git stash pop
 # cleaning mess
 git gc --prune=now
 git update-ref -d refs/heads/origin/branch
+
+# git pull scenario where remote branch has diverged - new commits pushed and some of it squashed 
+# pull w/o creating new commits 
+#
+# A---B---C---D local
+#     |
+#     +---C (squashed and hash changed) master
+# 
+git pull --ff-only     # >>> fatal: Not possible to fast-forward, aborting. <<< 
+# other options are merge (--no-rebase) or rebase (--rebse) and both those option will create new commits 
+# the best way is to reset 
+git reset --hard origin/branch-name 
+
+
