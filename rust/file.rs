@@ -6,6 +6,8 @@ fn main() {
                             .create(true)
                             .write(true)
                             .truncate(true)
-                            .open(TapStorage::TAP_HISTORY_FILE_PATH).expect("err opening file");
+                            .open("/file/path").expect("err opening file");
     let _ = f.write(buf.as_bytes());
+    // read from file 
+    let read_from_storage: String = std::fs::read_to_string("/file/path").unwrap_or("{}".to_string());
 }
