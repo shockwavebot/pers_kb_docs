@@ -26,15 +26,12 @@ pub fn max_calories(input_data_file: &str) -> i32 {
 
 pub fn sum_of_top_three_calories(datafile: &str) -> i32 {
     let mut input_array = read_input(datafile);
-    // sort the array
     let _ = input_array.sort();
     let _ = input_array.reverse();
-    // slice top 3
     let mut sum = 0;
     for i in [0,1,2] {
         sum += input_array[i];
     };
-    // return sum 
     sum
 }
  
