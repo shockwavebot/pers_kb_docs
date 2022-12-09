@@ -44,7 +44,7 @@ mod tests {
     #[test]
     fn test_read_input() {
         let r: Vec<i32> = read_input(TEST_INPUT);
-        println!("{:#?}", &r);
+        // println!("{:#?}", &r);
         assert_eq!(r.len(), 7);
     }
 
