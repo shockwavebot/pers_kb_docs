@@ -17,9 +17,7 @@ pub fn calculate_prio(character: char) -> i32 {
         character as i32 - 96
     } else if character.is_uppercase() {
         character as i32 - 38
-    } else {
-        0
-    }
+    } else { 0 }
 }
 
 pub fn get_item_prio(datafile: &str) -> i32 {
@@ -37,39 +35,36 @@ pub fn get_group_badges_sum(datafile: &str) -> i32 {
     let mut badge_sum: i32 = 0;
     let mut first_rucksack: String = "".to_string();
     let mut common_chars: Vec<char> = Vec::new();
-    let mut new_group = true;
-    let mut second_gr = false;
+    let mut new_triplet: Option<bool> = Some(true);
     let file = File::open(datafile).unwrap();
     for line in io::BufReader::new(file).lines() {
         let line_str = line.unwrap();
-        // println!(">>>> line: {:#?}", &line_str);
-        if new_group {
-            first_rucksack = line_str;
-            new_group = false;
-            second_gr = true;
-            // println!("first: {:#?}", &first_rucksack);
-        } else if second_gr {
-            for c in first_rucksack.as_str().chars() {
-                if line_str.contains(c) && !common_chars.contains(&c) {
-                    common_chars.push(c);
-                }
-            }
-            // println!("common: {:#?}", &common_chars);
-            second_gr = false;
-        } else {
-            for common_char in common_chars.iter() {
-                if line_str.contains(common_char.to_owned()) {
-                    badge_sum += calculate_prio(common_char.clone());
-                }
-            }
-            // println!("third: {:#?}", &badge_sum);
-            new_group = true;
-            common_chars.clear();
-        }
+        match new_triplet {
+            Some(true) => {
+                first_rucksack = line_str;
+                new_triplet = Some(false);
+            },
+            Some(false) => {
+                for c in first_rucksack.as_str().chars() {
+                    if line_str.contains(c) && !common_chars.contains(&c) {
+                        common_chars.push(c);
+                    }
+                };
+                new_triplet = None;
+            },
+            None => {
+                for common_char in common_chars.iter() {
+                    if line_str.contains(common_char.to_owned()) {
+                        badge_sum += calculate_prio(common_char.clone());
+                    }
+                };
+                common_chars.clear();
+                new_triplet = Some(true);
+            },
+        };
     }
     badge_sum
 }
-
 
 #[cfg(test)]
 mod tests {

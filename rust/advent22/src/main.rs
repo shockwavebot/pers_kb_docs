@@ -2,24 +2,26 @@
 mod day_01;
 mod day_02;
 mod day_03;
-
-const INPUT_FILE: &str = "src/data/input";
-const INPUT_FILE_D2: &str = "src/data/input_02_rps";
-const INPUT_FILE_D3: &str = "src/data/input_03_rucksacs";
+mod day_04;
 
 fn main() {
     // day 01
-    let mc = day_01::max_calories(INPUT_FILE);
-    let top_3_sum = day_01::sum_of_top_three_calories(INPUT_FILE);
-    println!("day 01: max calories by elfs: {}", &mc);
-    println!("day 01: top 3 sum: {:#?}", &top_3_sum);
+    let mc = day_01::max_calories("src/data/input");
+    let top_3_sum = day_01::sum_of_top_three_calories("src/data/input");
+    println!("day 01 part 1: max calories by elfs: {}", &mc);
+    println!("day 01 part 2: top 3 sum: {:#?}", &top_3_sum);
     // day 02
-    let (score, score_adjusted) = day_02::get_score(INPUT_FILE_D2);
-    println!("day 02: RPS score: {:#?}", &score);
-    println!("day 02: RPS adjusted score: {:#?}", &score_adjusted);
+    let (score, score_adjusted) = day_02::get_score("src/data/input_02_rps");
+    println!("day 02 part 1: RPS score: {:#?}", &score);
+    println!("day 02 part 2: RPS adjusted score: {:#?}", &score_adjusted);
     // day 03
-    let prio_sum = day_03::get_item_prio(INPUT_FILE_D3);
-    println!("day 03: prio sum: {:#?}", &prio_sum);
-    let team_sum = day_03::get_group_badges_sum(INPUT_FILE_D3);
-    println!("day 03: team sum: {:#?}", &team_sum);
+    let prio_sum = day_03::get_item_prio("src/data/input_03_rucksacs");
+    println!("day 03 part 1: prio sum: {:#?}", &prio_sum);
+    let team_sum = day_03::get_group_badges_sum("src/data/input_03_rucksacs");
+    println!("day 03 part 2: team sum: {:#?}", &team_sum);
+    // day 04
+    let count = day_04::count_fully_contained("src/data/input_04");
+    println!("day 04 part 1: fully contained count: {:#?}", &count);
+    let overlaps = day_04::count_overlaps("src/data/input_04");
+    println!("day 04 part 1: overlaps count: {:#?}", &overlaps);
 }
