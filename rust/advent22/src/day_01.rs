@@ -39,7 +39,7 @@ pub fn sum_of_top_three_calories(datafile: &str) -> i32 {
 #[cfg(test)]
 mod tests {
     use super::*;
-    const TEST_INPUT: &str = "src/data/unit_test_01";
+    const TEST_INPUT: &str = "src/data/unit01";
 
     #[test]
     fn test_read_input() {
