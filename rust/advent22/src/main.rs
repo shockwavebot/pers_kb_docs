@@ -3,6 +3,7 @@ mod day_01;
 mod day_02;
 mod day_03;
 mod day_04;
+mod day_05;
 
 fn main() {
     // day 01
@@ -24,4 +25,9 @@ fn main() {
     println!("day 04 part 1: fully contained count: {:#?}", &count);
     let overlaps = day_04::count_overlaps("src/data/input_04");
     println!("day 04 part 1: overlaps count: {:#?}", &overlaps);
+    // day 05
+    let top = day_05::rearrangement("src/data/input_05_crates");
+    println!("day 04 part 1: top cargo after move: {:#?}", &top);
+    let top9001 = day_05::rearrangement_9001("src/data/input_05_crates");
+    println!("day 04 part 1: top cargo after move with 9001: {:#?}", &top9001);
 }
