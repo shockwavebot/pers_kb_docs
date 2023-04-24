@@ -4,6 +4,7 @@ mod day_02;
 mod day_03;
 mod day_04;
 mod day_05;
+mod day_06;
 
 fn main() {
     // day 01
@@ -30,4 +31,7 @@ fn main() {
     println!("day 04 part 1: top cargo after move: {:#?}", &top);
     let top9001 = day_05::rearrangement_9001("src/data/in05");
     println!("day 04 part 1: top cargo after move with 9001: {:#?}", &top9001);
+    // day 06
+    // let top = day_06::rearrangement("src/data/in06");
+    // println!("day 04 part 1: top cargo after move: {:#?}", &top);
 }

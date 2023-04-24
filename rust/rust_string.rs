@@ -11,7 +11,14 @@ let sl = s.get(s.len()-2..).unwrap();
 // reverse a string
 "mystring".chars().rev().collect();
 
+// get 4 chars from pointer 
+let pointer = 4;
+"12345678".get(pointer..pointer+4).unwrap(); // 5678
 
+// iterate over str
+for (n,i) in s.chars().enumerate() {
+    println!("{} {}", &n, &i);
+}
 
 
 
@@ -24,3 +31,10 @@ let x = 1;
 println!("{}", type_name_of_val(&x));
 let y = 1.0;
 println!("{}", type_name_of_val(&y));
+
+fn inter_uni(first: &Vec<Vec<i8>>, second: &Vec<Vec<i8>>) -> Vec<i8> {
+    let mut res_union: Vec<i8> = Vec::new();
+    for f in first.iter(){
+        
+    }
+}
