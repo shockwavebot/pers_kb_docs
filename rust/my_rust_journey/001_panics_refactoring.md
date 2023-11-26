@@ -15,3 +15,4 @@ The alternative would be to return `Result` type and meaningful error type, and 
 Where you can use `.expect`?
 - `Result` > you can replace it with `?`
 - `Option` > convert `Option` to `Result` with `.ok_or()` and then `?`
+
